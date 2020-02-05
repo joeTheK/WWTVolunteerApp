@@ -69,4 +69,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 ### This is a test commit
 
--Joey Did This Commit
+-This is a test Commit
