@@ -1,20 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 import { 
   BrowserRouter as Router, 
   Route, 
   Switch, 
-  Link, 
   Redirect 
 } from "react-router-dom";
 
 //Pages
-import Login from "./pages/login";
+import Login from "./pages/loginPage/login";
 import NotFound from "./pages/404";
-import Home from "./pages/home";
-import Community from "./pages/community";
+import Home from "./pages/homePage/home";
+import Community from "./pages/communityPage/community";
 
 function App() {
   return (
