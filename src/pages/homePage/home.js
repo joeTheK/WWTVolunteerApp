@@ -5,7 +5,7 @@ import "./home.css";
 class Home extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="HomeBody">
         <Navbar />
         <h1>This Will be the Home Page!</h1>
         <small>Home Page</small>
