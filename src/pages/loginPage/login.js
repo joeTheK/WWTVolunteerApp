@@ -1,12 +1,7 @@
 import React, { Component } from "react";
 import "./login.css";
-import 'font-awesome/css/font-awesome.min.css';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faGoogle} from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import GoogleLogin from 'react-google-login';
+import { GoogleLogin } from 'react-google-login';
 
-library.add(faGoogle);
 class Login extends Component {
 
   render() {
