@@ -7,8 +7,10 @@ class Home extends Component {
     return (
       <div className="HomeBody">
         <Navbar />
-        <h1>This Will be the Home Page!</h1>
-        <small>Home Page</small>
+        <div className="container">
+          <h1>This Will be the Home Page!</h1>
+          <small>Home Page</small>
+        </div>
       </div>
     );
   }
