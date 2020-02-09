@@ -4,18 +4,28 @@ import 'font-awesome/css/font-awesome.min.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faGoogle} from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import GoogleLogin from 'react-google-login';
+
 library.add(faGoogle);
-
-
 class Login extends Component {
+
   render() {
+
+    const responseGoogle = (response) => {
+      console.log(response);
+    }
+
     return (
-    <div className="App">
-      <div id="box">
-        <FontAwesomeIcon icon="Google"  />
-        <button id="google" className="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i className="Google"></i>Sign in with Google</button>
+      <div className="App">
+        <div className="box">
+          <GoogleLogin 
+          clientId="486383932824-76bvkkigh5vsmbkthvljcnae2t19u16j.apps.googleusercontent.com"
+          buttonText="LOGIN WITH GOOGLE"
+          onSuccess={responseGoogle}
+          onFailure={responseGoogle}
+          />
+        </div>
       </div>
-    </div>
     );
   }
 }

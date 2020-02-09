@@ -2,20 +2,3 @@ body {
   background-image: url("https://images.unsplash.com/photo-1536882240095-0379873feb4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80");
   background-size: cover;
 }
-#box{
-  height: 100px;
-  padding: 2px 16px;
-  display:table;
-  width: 100%;}
-
-
-#google {
-  color: white;
-  background-color:#ea4335;
-  border-radius: 1rem;
-  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
-  margin:auto;
-  width:25%;  
-  margin-top: 20%;
-  height:20%;
-}
