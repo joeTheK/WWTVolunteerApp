@@ -53,6 +53,11 @@ class Navbar extends Component {
                 Community
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/opportunities">
+                Opportunities
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
