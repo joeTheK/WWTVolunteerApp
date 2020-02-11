@@ -7,7 +7,7 @@ class Login extends Component {
   render() {
 
     const responseGoogle = (response) => {
-      console.log(response);
+      document.location.href = '/community'; // This changes the URL when the popup goes away - Christopher
     }
 
     return (
