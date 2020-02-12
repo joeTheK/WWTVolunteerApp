@@ -17,7 +17,7 @@ class Login extends Component {
           clientId="486383932824-76bvkkigh5vsmbkthvljcnae2t19u16j.apps.googleusercontent.com"
           buttonText="LOGIN WITH GOOGLE"
           onSuccess={responseGoogle}
-          onFailure={responseGoogle}
+          onFailure={console.log("bad")}
           />
         </div>
       </div>
