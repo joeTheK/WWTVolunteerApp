@@ -13,14 +13,20 @@ app.use(express.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 app.listen(PORT, () => {
-    console.log('server listening on ' + PORT + "...");
+    console.log(`Server listening on port ${PORT}!`);
 });
 
 db.query('SELECT NOW()', (err, res) => {
     if (err.error)
         return console.log(err.error);
-    console.log('PostgreSQL connected: ' + res[0].now);
-
+    console.log(`PostgreSQL connected: ${res[0].now}.`);
 })
+
+// db.query('SELECT NOW()', (err, res) => {
+//     if (err.error)
+//         return console.log(err.error);
+//     console.log('PostgreSQL connected: ' + res[0].now);
+
+// })
 
 module.exports = app;
