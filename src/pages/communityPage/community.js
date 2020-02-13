@@ -5,11 +5,18 @@ import Navbar from "../components/Navbar";
 class Community extends Component {
   render() {
     return (
-      <div className="CommunityBody">
-        <Navbar />
-        <h1>This Will be the Community Page!</h1>
-        <small>Community Page</small>
-      </div>
+      <React.Fragment>
+        <div className="CommunityBody">
+          <Navbar />
+          <div className="mainContent">
+            <div className="feed">feed</div>
+
+            <div className="maps">maps</div>
+
+            <div className="incent">incentives</div>
+          </div>
+        </div>
+      </React.Fragment>
     );
   }
 }

@@ -2,3 +2,68 @@
   min-height: 100vh;
   text-align: center;
 }
+
+@media only screen and (min-width: 501px) {
+  .boi {
+    padding: 10px;
+  }
+  .mainContent {
+    padding: 1em;
+    display: grid;
+    grid-gap: 1em;
+    width: 100%;
+    max-height: 100%;
+    display: grid;
+    grid-template:
+      "feed  maps maps"
+      "feed  maps maps"
+      "feed  maps maps "
+      "feed incent incent";
+    grid-template-rows: 36em;
+  }
+  .feed {
+    grid-area: feed;
+    background-color: red;
+  }
+  .maps {
+    grid-area: maps;
+    padding: 1em;
+    background-color: green;
+  }
+  .incent {
+    background-color: blue;
+    padding: 1em;
+    grid-area: incent;
+  }
+  .test {
+    color: red;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .boi {
+    padding: 10px;
+  }
+  .mainContent {
+    padding: 1em;
+    width: 100%;
+    height: 100vh;
+  }
+  .feed {
+    background-color: red;
+    height: 200px;
+  }
+  .maps {
+    margin-top: 5px;
+    padding: 1em;
+    height: 70vh;
+    background-color: green;
+  }
+  .incent {
+    background-color: blue;
+    padding: 1em;
+  }
+  .test {
+    color: red;
+  }
+}
