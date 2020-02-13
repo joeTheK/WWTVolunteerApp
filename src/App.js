@@ -14,6 +14,7 @@ import NotFound from "./pages/404";
 import Home from "./pages/homePage/home";
 import Community from "./pages/communityPage/community";
 import Opportunities from "./pages/opportunitiesPage/opportunities";
+// import Api from "./server/api/cities.js"
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route exact path="/community" component={Community} />
         <Route exact path="/opportunities" component={Opportunities} />
         <Route exact path="/404" component={NotFound} />
+        {/* <Route exact path="/api" component={Api} /> */}
         <Redirect to="/404" />
       </Switch>
     </Router>
