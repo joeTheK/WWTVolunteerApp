@@ -11,8 +11,8 @@ class Login extends Component {
     }
 
     return (
-      <div className="App">
-        <div className="box">
+      <div id="App">
+        <div id="box">
           <GoogleLogin 
           clientId="486383932824-76bvkkigh5vsmbkthvljcnae2t19u16j.apps.googleusercontent.com"
           buttonText="LOGIN WITH GOOGLE"
