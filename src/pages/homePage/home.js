@@ -22,39 +22,45 @@ class Home extends Component {
     return (
       <div className="HomeBody">
         <Navbar />
-        <div className="logHours">
-          <LogHourForm userName={this.state.userName} />
-        </div>
-        {/* SideBar */}
-        <div className="sideBar">
-          <img
-            src={this.state.userPic}
-            alt="User Profile"
-            className="img-fluid img-profile"
-          />
-          <div
-            className="container"
-            style={{ marginTop: "5%", textAlign: "center" }}
-          >
-            <div class="progress">
-              <div
-                class="progress-bar progress-bar-striped progress-bar-animated"
-                role="progressbar"
-                style={progressStyle}
-                aria-valuenow={this.state.progressComplete}
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                {this.state.progressComplete}%
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-8">
+              <div className="logHours">
+                <LogHourForm userName={this.state.userName} />
               </div>
             </div>
-            <p>
-              {this.state.userName} has{" "}
-              <span style={{ color: "#81c784" }}>
-                {this.state.progressComplete}/100
-              </span>{" "}
-              hours completed
-            </p>
+            <div className="col-sm-4">
+              {/* Side Bar */}
+              <div
+                className="container"
+                style={{ marginTop: "5%", textAlign: "center" }}
+              >
+                <img
+                  src={this.state.userPic}
+                  alt="User Profile"
+                  className="img-fluid img-profile"
+                />
+                <div className="progress">
+                  <div
+                    className="progress-bar progress-bar-striped progress-bar-animated"
+                    role="progressbar"
+                    style={progressStyle}
+                    aria-valuenow={this.state.progressComplete}
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    {this.state.progressComplete}%
+                  </div>
+                </div>
+                <p>
+                  {this.state.userName} has{" "}
+                  <span style={{ color: "#81c784" }}>
+                    {this.state.progressComplete}/100
+                  </span>{" "}
+                  hours completed
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
