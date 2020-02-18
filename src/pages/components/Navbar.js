@@ -58,6 +58,11 @@ class Navbar extends Component {
                 Opportunities
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/ourstory">
+                Our Story
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
