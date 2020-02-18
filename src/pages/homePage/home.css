@@ -1,3 +1,25 @@
 .HomeBody {
   text-align: center;
 }
+
+.inputStyle {
+  background: #f1edee;
+  border: none;
+  border-radius: 5px;
+  height: 25px;
+  width: 33%;
+  color: #686963;
+  font-size: 1em;
+  padding-left: 5px;
+  margin-top: 5px;
+}
+
+.inputStyle:focus {
+  outline: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

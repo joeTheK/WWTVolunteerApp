@@ -43,26 +43,42 @@ class LogHourForm extends Component {
       <form onSubmit={this.mySubmitHandler}>
         <h1>Hello {this.props.userName}</h1>
         <input
+          className="inputStyle"
           type="number"
           placeholder="Hours Served"
           onChange={this.hourChangeHandler}
         />
+        <br />
         <input
+          className="inputStyle"
           type="text"
           placeholder="Site Name"
           onChange={this.nameChangeHandler}
         ></input>
+        <br />
         <input
+          className="inputStyle"
           type="text"
           placeholder="Site Address"
           onChange={this.addressChangeHandler}
         ></input>
+        <br />
         <input
+          className="inputStyle"
           type="email"
           placeholder="Email of Coordinator"
           onChange={this.emailChangeHandler}
         ></input>
-        <input type="submit" />
+        <br />
+        <input
+          type="submit"
+          className="btn btn-info"
+          style={{
+            marginTop: "5px",
+            backgroundColor: "#81C784",
+            borderColor: "#81C784"
+          }}
+        />
       </form>
     );
   }
