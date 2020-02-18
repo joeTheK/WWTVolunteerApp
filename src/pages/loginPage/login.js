@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./login.css";
 import { GoogleLogin } from 'react-google-login';
+import "typeface-quicksand";
+
 
 class Login extends Component {
 
@@ -13,12 +15,18 @@ class Login extends Component {
     return (
       <div id="App">
         <div id="box">
-          <GoogleLogin 
+        <h1 id="text">1,000</h1>
+        <h2 id="text">Hours Served </h2>
+        <br></br>
+        <div id="button">
+          <GoogleLogin
           clientId="486383932824-76bvkkigh5vsmbkthvljcnae2t19u16j.apps.googleusercontent.com"
-          buttonText="LOGIN WITH GOOGLE"
-          onSuccess={responseGoogle}
+          buttonText="Login With Google"
+          onSuccess={ responseGoogle }
           onFailure={console.log("bad")}
+          cookiePolicy={'single_host_origin'}
           />
+        </div>
         </div>
       </div>
     );

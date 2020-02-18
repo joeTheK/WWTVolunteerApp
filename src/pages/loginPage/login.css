@@ -1,20 +1,28 @@
 html{
   min-height:100%;
   position:relative;
+  background-image: linear-gradient(#030D61, #C4C4C4);
 }
 
 #box {
   position: fixed;
   height: 100%;
   width: 100%;
-  padding-left: 43%;
-  padding-top: 20%;
-  background-image: linear-gradient(#43ff3d,#BFFFC1, #E8FFE8);
+  padding-top: 19%;
+  background-image: linear-gradient(#030D61, #C4C4C4);
+}
+#button{
+  padding-left: 45%;
+  z-index: 1;
+  font-family: 'Quicksand', sans-serif;
 }
 #App{
-  max-height: 100%;
-  position:absolute;
-  overflow:hidden;
-  z-index:-1;
+  height: 100%;
+  width: 100%;
 }
-
+#text{
+  color:white;
+  text-align: center;
+  z-index: 1;
+  font-family: 'Quicksand', sans-serif;
+  }
