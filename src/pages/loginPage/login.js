@@ -15,7 +15,7 @@ class Login extends Component {
     return (
       <div id="App">
         <div id="box">
-        <h1 id="text">1,000</h1>
+        <h1 id="counter">1 0 0 0</h1>
         <h2 id="text">Hours Served </h2>
         <br></br>
         <div id="button">
