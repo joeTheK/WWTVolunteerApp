@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import "./opportunities.css";
 import Navbar from "../components/Navbar";
-import { Card } from "semantic-ui-react";
+import { Card, Button } from "semantic-ui-react";
+import { validate } from "../../utils/volunteer_validator";
 //
 import Tabletop from "tabletop";
 //Dynamically pulls from google sheets: requires npm install tabletop
@@ -14,7 +15,8 @@ class Opportunities extends Component {
 
     this.state = {
       data: [],
-      op: match.params["op"]
+      op: match.params["op"],
+      filterType: "all"
     };
   }
   componentDidMount() {
@@ -48,21 +50,31 @@ class Opportunities extends Component {
     //table stuff^^
     if (this.state.op === "tstyle") {
       console.log(data);
+      var dataToShow;
+      if (this.state.filterType === "all") {
+        dataToShow = data;
+      }
+      if (this.state.filterType === "onlyvalid") {
+        dataToShow = this.filterList(data);
+      }
+      if (this.state.filterType === "women") {
+        dataToShow = this.filterListForWomen(this.filterList(data));
+      }
+      if (this.state.filterType === "arts") {
+        dataToShow = this.filterListForArts(data);
+      }
+      if (this.state.filterType === "animals") {
+        dataToShow = this.filterListForAnimals(this.filterList(data));
+      }
       return (
         <div className="OpportunitiesBody">
           <Navbar />
-          <h1>What i want to see!!</h1>
-          {data.map(doc => {
-            // return (
-            //   <>
-            //     <div className="altLayout">
-            //       <h2>{doc.OrgName}</h2>
-            //       <div>
-            //         <b>Address</b> <i>{doc.Address}</i>
-            //       </div>
-            //     </div>
-            //   </>
-            // );
+          <Button onClick={this.showAll}>ALL</Button>{" "}
+          <Button onClick={this.showOnlyValid}>Only Valid</Button>
+          <Button onClick={this.showOnlyWomen}>Women</Button>
+          <Button onClick={this.showOnlyAnimals}>Animal</Button>
+          <Button onClick={this.showOnlyArts}>Arts</Button>
+          {dataToShow.map(doc => {
             return (
               <>
                 <Card>
@@ -128,6 +140,61 @@ class Opportunities extends Component {
       </div>
     );
   }
+
+  filterList(docs) {
+    var temp = [];
+    docs.forEach(doc => {
+      if (validate(doc)) {
+        temp.push(doc);
+      }
+    });
+    return temp;
+  }
+
+  filterListForWomen(docs) {
+    var temp = [];
+    docs.forEach(doc => {
+      if (doc["Categories"].match("Women")) {
+        temp.push(doc);
+      }
+    });
+    return temp;
+  }
+  filterListForAnimals(docs) {
+    var temp = [];
+    docs.forEach(doc => {
+      if (doc["Categories"].match("Animals")) {
+        temp.push(doc);
+      }
+    });
+    return temp;
+  }
+  filterListForArts(docs) {
+    var temp = [];
+    docs.forEach(doc => {
+      if (doc["Categories"].match("Arts")) {
+        temp.push(doc);
+      }
+    });
+    return temp;
+  }
+  showAll = () => {
+    this.setState({ filterType: "all" });
+  };
+  showOnlyValid = () => {
+    this.setState({ filterType: "onlyvalid" });
+  };
+  showOnlyWomen = () => {
+    this.setState({ filterType: "women" });
+  };
+
+  showOnlyArts = () => {
+    this.setState({ filterType: "arts" });
+  };
+
+  showOnlyAnimals = () => {
+    this.setState({ filterType: "animals" });
+  };
 }
 
 export default Opportunities;
