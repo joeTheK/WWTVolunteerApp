@@ -26,6 +26,7 @@ function App() {
         <Route exact path="/community" component={Community} />
         <Route exact path="/opportunities" component={Opportunities} />
         <Route exact path="/ourstory" component={ourStory} />
+        <Route exact path="/opportunities/:op" component={Opportunities} />
         <Route exact path="/404" component={NotFound} />
         {/* <Route exact path="/api" component={Api} /> */}
         <Redirect to="/404" />

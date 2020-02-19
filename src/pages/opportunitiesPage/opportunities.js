@@ -48,7 +48,7 @@ class Opportunities extends Component {
     };
     const { data } = this.state;
     //table stuff^^
-    if (this.state.op === "tstyle") {
+    if (this.state.op === "alt") {
       console.log(data);
       var dataToShow;
       if (this.state.filterType === "all") {
