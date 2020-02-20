@@ -15,6 +15,7 @@ class Community extends Component {
               <TwitterTimelineEmbed
               sourceType="profile"
               screenName="VolunP"
+              data-chrome="nofooter noheader"
               options={{height: 1000}}
               />
             </div>
