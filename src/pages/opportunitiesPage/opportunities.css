@@ -11,3 +11,12 @@
 /* .test {
   background-color: green !important;
 } */
+.op_contain {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 85%;
+  min-width: 950px;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -48,7 +48,7 @@ class Opportunities extends Component {
     };
     const { data } = this.state;
     //table stuff^^
-    if (this.state.op === "tstyle") {
+    if (this.state.op === "alt") {
       console.log(data);
       var dataToShow;
       if (this.state.filterType === "all") {
@@ -74,42 +74,44 @@ class Opportunities extends Component {
           <Button onClick={this.showOnlyWomen}>Women</Button>
           <Button onClick={this.showOnlyAnimals}>Animal</Button>
           <Button onClick={this.showOnlyArts}>Arts</Button>
-          {dataToShow.map(doc => {
-            return (
-              <>
-                <Card>
-                  <Card.Content className="test">
-                    <Card.Header>{doc.OrgName}</Card.Header>
-                    <Card.Meta>{doc.Address}</Card.Meta>
-                    <a
-                      href={doc.DonationLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Donate Now
-                    </a>
-                    &nbsp;
-                    <a
-                      href={doc.VolunteerForm}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Apply now
-                    </a>
-                    <br />
-                    <a
-                      href={doc.Homepage}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Contact Us
-                    </a>
-                    <p>{doc.DescriptionMission}</p>
-                  </Card.Content>
-                </Card>
-              </>
-            );
-          })}
+          <div className={"op_contain"}>
+            {dataToShow.map(doc => {
+              return (
+                <>
+                  <Card>
+                    <Card.Content className="test">
+                      <Card.Header>{doc.OrgName}</Card.Header>
+                      <Card.Meta>{doc.Address}</Card.Meta>
+                      <a
+                        href={doc.DonationLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Donate Now
+                      </a>
+                      &nbsp;
+                      <a
+                        href={doc.VolunteerForm}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Apply now
+                      </a>
+                      <br />
+                      <a
+                        href={doc.Homepage}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Contact Us
+                      </a>
+                      <p>{doc.DescriptionMission}</p>
+                    </Card.Content>
+                  </Card>
+                </>
+              );
+            })}
+          </div>
         </div>
       );
     }
