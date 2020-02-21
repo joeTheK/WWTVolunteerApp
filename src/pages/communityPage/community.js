@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./community.css";
 import Navbar from "../components/Navbar";
-import { TwitterTimelineEmbed} from 'react-twitter-embed';
+import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 class Community extends Component {
   render() {
@@ -11,12 +11,11 @@ class Community extends Component {
           <Navbar />
           <div className="mainContent">
             <div className="feed">
-              <h1>Feed</h1>
               <TwitterTimelineEmbed
-              sourceType="profile"
-              screenName="VolunP"
-              data-chrome="nofooter noheader"
-              options={{height: 600}}
+                sourceType="profile"
+                screenName="VolunP"
+                data-chrome="nofooter noheader"
+                options={{ height: 600 }}
               />
             </div>
             <div className="maps">maps</div>

@@ -23,7 +23,6 @@
   }
   .feed {
     grid-area: feed;
-    background-color: red;
   }
   .maps {
     grid-area: maps;
@@ -49,10 +48,7 @@
     width: 100%;
     height: 100vh;
   }
-  .feed {
-    background-color: red;
-    height: 200px;
-  }
+
   .maps {
     margin-top: 5px;
     padding: 1em;

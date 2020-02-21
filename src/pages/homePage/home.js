@@ -9,8 +9,7 @@ class Home extends Component {
     super(props);
     this.state = {
       userName: "User",
-      userPic:
-        "https://unsplash.com/photos/BlGmdY18CFQ",
+      userPic: "https://unsplash.com/photos/BlGmdY18CFQ",
       progressComplete: 87
     };
   }
@@ -18,11 +17,13 @@ class Home extends Component {
     const progressStyle = {
       width: this.state.progressComplete + "%",
       color: "white",
-      backgroundColor: "#81C784"
+      backgroundColor: "#030D61"
     };
     return (
       <div className="HomeBody">
         <Navbar />
+        <br></br>
+        <br></br>
         <div className="container">
           <div className="row">
             <div className="col-sm-8">
@@ -31,6 +32,7 @@ class Home extends Component {
                   <LogHourForm userName={this.state.userName} />
                 </div>
               </div>
+              <br></br>
               <div className="card">
                 <div className="card-body">
                   <MissionVision />
@@ -60,7 +62,7 @@ class Home extends Component {
                   </div>
                   <p>
                     {this.state.userName} has{" "}
-                    <span style={{ color: "#81c784" }}>
+                    <span style={{ color: "#030D61" }}>
                       {this.state.progressComplete}/100
                     </span>{" "}
                     hours completed

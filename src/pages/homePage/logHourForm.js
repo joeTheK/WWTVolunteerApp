@@ -75,8 +75,8 @@ class LogHourForm extends Component {
           className="btn btn-info"
           style={{
             marginTop: "5px",
-            backgroundColor: "#81C784",
-            borderColor: "#81C784"
+            backgroundColor: "#030D61",
+            borderColor: "#030D61"
           }}
         />
       </form>
