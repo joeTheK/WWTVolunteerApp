@@ -8,9 +8,9 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      userName: "John Doe",
+      userName: "User",
       userPic:
-        "https://images.pexels.com/photos/736716/pexels-photo-736716.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        "https://unsplash.com/photos/BlGmdY18CFQ",
       progressComplete: 87
     };
   }

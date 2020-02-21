@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./community.css";
 import Navbar from "../components/Navbar";
-import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterHashtagButton, TwitterMentionButton, TwitterTweetEmbed, TwitterMomentShare, TwitterDMButton, TwitterVideoEmbed, TwitterOnAirButton } from 'react-twitter-embed';
+import { TwitterTimelineEmbed} from 'react-twitter-embed';
 
 class Community extends Component {
   render() {
@@ -16,7 +16,7 @@ class Community extends Component {
               sourceType="profile"
               screenName="VolunP"
               data-chrome="nofooter noheader"
-              options={{height: 1000}}
+              options={{height: 600}}
               />
             </div>
             <div className="maps">maps</div>
