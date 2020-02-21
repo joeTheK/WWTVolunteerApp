@@ -3,14 +3,14 @@ import Navbar from "../components/Navbar";
 import LogHourForm from "./logHourForm";
 import MissionVision from "../components/MissionVision";
 import "./home.css";
+import corwin from "./corwin.jpg";
 
 class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
       userName: "User",
-      userPic:
-        "https://images.pexels.com/photos/736716/pexels-photo-736716.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      userPic: "corwin.jpg",
       progressComplete: 87
     };
   }
@@ -52,10 +52,10 @@ class Home extends Component {
               <div className="card">
                 <div className="card-body">
                   <img
-                    src={this.state.userPic}
+                    src={corwin}
                     alt="User Profile"
                     className="img-fluid img-profile"
-                    style={{ marginBottom: "5px" }}
+                    style={{ marginBottom: "5px", height: "250px" }}
                   />
                   <div className="progress">
                     <div
@@ -71,7 +71,7 @@ class Home extends Component {
                   </div>
                   <p>
                     {this.state.userName} has{" "}
-                    <span style={{ color: "#030D61" }}>
+                    <span style={{ color: "#030D61", fontWeight: "bold" }}>
                       {this.state.progressComplete}/100
                     </span>{" "}
                     hours completed
