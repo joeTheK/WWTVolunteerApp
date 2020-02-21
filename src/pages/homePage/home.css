@@ -1,9 +1,11 @@
 .HomeBody {
   text-align: center;
+  font-family: Quicksand;
+  font-style: normal;
 }
 
 .inputStyle {
-  background: #f1edee;
+  background: linear-gradient(180deg, #030D61 0%, rgba(71, 123, 128, 0.727078) 41.67%, rgba(124, 183, 154, 0.73) 69.79%, #F3F3F3 100%);
   border: none;
   border-radius: 5px;
   height: 25px;
