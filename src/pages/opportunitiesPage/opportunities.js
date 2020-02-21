@@ -150,7 +150,7 @@ class Opportunities extends Component {
   </button>
   {this.state.open && (
     <div class="dropdown">
-      <ul>
+      <ul className = "list">
         <li><Button onClick={this.showAll}>ALL</Button>{" "}</li>
         <li><Button onClick={this.showOnlyWomen}>Women</Button></li>
         <li><Button onClick={this.showOnlyAnimals}>Animal</Button></li>
@@ -159,6 +159,8 @@ class Opportunities extends Component {
         <li><Button onClick={this.showOnlyEnvironmental}>Environmental</Button></li>
         <li><Button onClick={this.showOnlyLegal}>Legal</Button></li>
         <li><Button onClick={this.showOnlyRac}>Racial/Ethnic</Button></li>
+        </ul>
+        <ul className = "list">
         <li><Button onClick={this.showOnlyHealth}>Health</Button></li>
         <li><Button onClick={this.showOnlyDisab}>Disabilities</Button></li>
         <li><Button onClick={this.showOnlyHunger}>Hunger</Button></li>
@@ -166,6 +168,8 @@ class Opportunities extends Component {
         <li><Button onClick={this.showOnlyCommunity}>Community</Button></li>
         <li><Button onClick={this.showOnlyMusic}>Music</Button></li>
         <li><Button onClick={this.showOnlyFaith}>Faith</Button></li>
+        </ul>
+        <ul className = "list2">
         <li><Button onClick={this.showOnlyVeterans}>Veterans</Button></li>
         <li><Button onClick={this.showOnlyEducation}>Education</Button></li>
         <li><Button onClick={this.showOnlyLGBTQIA}>LGBTQIA</Button></li>
@@ -173,9 +177,7 @@ class Opportunities extends Component {
         <li><Button onClick={this.showOnlySeniors}>Seniors</Button></li>
         <li><Button onClick={this.showOnlyFitness}>Fitness</Button></li>
         <li><Button onClick={this.showOnlySports}>Sports</Button></li>
-
-
-      </ul>
+        </ul>
     </div>
   )}
 </div>
@@ -448,7 +450,7 @@ class Opportunities extends Component {
     return temp;
   }
   showAll = () => {
-    this.setState({ filterType: "all" });
+    this.setState({ filterType: "All" });
   };
   // showOnlyValid = () => {
   //   this.setState({ filterType: "onlyvalid" });
