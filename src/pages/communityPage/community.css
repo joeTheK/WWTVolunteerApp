@@ -23,7 +23,6 @@
   }
   .feed {
     grid-area: feed;
-    background-color: red;
   }
   .maps {
     grid-area: maps;
