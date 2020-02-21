@@ -35,20 +35,20 @@ class Opportunities extends Component {
 
   render() {
     //Mess with Table CSS here:
-    var tableStyle = {
-      border: "1px solid black",
-      borderright: "1px solid red",
-      paddingTop: "0px",
-      paddingBottom: "0px",
-      paddingLeft: "0px",
-      paddingRight: "10px",
-      fontSize: "small",
-      padding: "0",
-      margin: "0"
-    };
+    // var tableStyle = {
+    //   border: "1px solid black",
+    //   borderright: "1px solid red",
+    //   paddingTop: "0px",
+    //   paddingBottom: "0px",
+    //   paddingLeft: "0px",
+    //   paddingRight: "10px",
+    //   fontSize: "small",
+    //   padding: "0",
+    //   margin: "0"
+    // };
     const { data } = this.state;
     //table stuff^^
-    if (this.state.op === "alt") {
+    // if (this.state.op === "alt") {
       console.log(data);
       var dataToShow;
       if (this.state.filterType === "all") {
@@ -114,33 +114,33 @@ class Opportunities extends Component {
           </div>
         </div>
       );
-    }
+    // }
 
-    return (
-      <div className="OpportunitiesBody">
-        <Navbar />
-        {console.log("i hit this")}
-        {data.map(obj => {
-          // Table below pulls from google sheet
-          return (
-            // obj.orgName pulls info from column header OrgName,
-            //repeats for length of spreadsheet
-            <div key={obj.OrgName}>
-              <table style={tableStyle}>
-                <td>{obj.OrgName}</td>
-                <td>{obj.Categories}</td>
-                <td>{obj.DescriptionMission}</td>
-                <td>{obj.VolunteerForm}</td>
-                <td>{obj.DonationLink}</td>
-                <td>{obj.Email}</td>
-                <td>{obj.Phone}</td>
-                <td>{obj.Address}</td>
-              </table>
-            </div>
-          );
-        })}
-      </div>
-    );
+    // return (
+    //   <div className="OpportunitiesBody">
+    //     <Navbar />
+    //     {console.log("i hit this")}
+    //     {data.map(obj => {
+    //       // Table below pulls from google sheet
+    //       return (
+    //         // obj.orgName pulls info from column header OrgName,
+    //         //repeats for length of spreadsheet
+    //         <div key={obj.OrgName}>
+    //           <table style={tableStyle}>
+    //             <td>{obj.OrgName}</td>
+    //             <td>{obj.Categories}</td>
+    //             <td>{obj.DescriptionMission}</td>
+    //             <td>{obj.VolunteerForm}</td>
+    //             <td>{obj.DonationLink}</td>
+    //             <td>{obj.Email}</td>
+    //             <td>{obj.Phone}</td>
+    //             <td>{obj.Address}</td>
+    //           </table>
+    //         </div>
+    //       );
+    //     })}
+    //   </div>
+    // );
   }
 
   filterList(docs) {
