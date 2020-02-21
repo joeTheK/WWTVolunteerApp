@@ -29,7 +29,7 @@ class Opportunities extends Component {
     this.state = {
       data: [],
       op: match.params["op"],
-      filterType: "all"
+      filterType: "All"
     };
   }
   componentDidMount() {
@@ -65,38 +65,74 @@ class Opportunities extends Component {
     // if (this.state.op === "alt") {
       console.log(data);
       var dataToShow;
-      if (this.state.filterType === "all") {
+      if (this.state.filterType === "All") {
         dataToShow = data;
       }
       // if (this.state.filterType === "onlyvalid") {
       //   dataToShow = this.filterList(data);
       // }
-      if (this.state.filterType === "women") {
+      if (this.state.filterType === "Women") {
         dataToShow = this.filterListForWomen(this.filterList(data));
       }
-      if (this.state.filterType === "arts") {
+      if (this.state.filterType === "Arts") {
         dataToShow = this.filterListForArts(data);
       }
-      if (this.state.filterType === "animals") {
+      if (this.state.filterType === "Animals") {
         dataToShow = this.filterListForAnimals(this.filterList(data));
       }
-      if (this.state.filterType === "children") {
+      if (this.state.filterType === "Children") {
         dataToShow = this.filterListForChildren(this.filterList(data));
       }
-      if (this.state.filterType === "legal") {
+      if (this.state.filterType === "Legal") {
         dataToShow = this.filterListForLegal(this.filterList(data));
       }
-      if (this.state.filterType === "environmental") {
+      if (this.state.filterType === "Environmental") {
         dataToShow = this.filterListForEnvironmental(this.filterList(data));
       }
-      if (this.state.filterType === "rac") {
+      if (this.state.filterType === "Racial/Ethnic") {
         dataToShow = this.filterListForRac(this.filterList(data));
       }
-      if (this.state.filterType === "health") {
+      if (this.state.filterType === "Health") {
         dataToShow = this.filterListForHealth(this.filterList(data));
       }
-      if (this.state.filterType === "disab") {
+      if (this.state.filterType === "Disabilities") {
         dataToShow = this.filterListForDisab(this.filterList(data));
+      }
+      if (this.state.filterType === "Hunger") {
+        dataToShow = this.filterListForHunger(this.filterList(data));
+      }
+      if (this.state.filterType === "Homelessness") {
+        dataToShow = this.filterListForHome(this.filterList(data));
+      }
+      if (this.state.filterType === "Community") {
+        dataToShow = this.filterListForCommunity(this.filterList(data));
+      }
+      if (this.state.filterType === "Music") {
+        dataToShow = this.filterListForMusic(this.filterList(data));
+      }
+      if (this.state.filterType === "Faith") {
+        dataToShow = this.filterListForFaith(this.filterList(data));
+      }
+      if (this.state.filterType === "Veterans") {
+        dataToShow = this.filterListForVeterans(this.filterList(data));
+      }
+      if (this.state.filterType === "Education") {
+        dataToShow = this.filterListForEducation(this.filterList(data));
+      }
+      if (this.state.filterType === "LGBTQIA") {
+        dataToShow = this.filterListForLGBTQIA(this.filterList(data));
+      }
+      if (this.state.filterType === "Youth") {
+        dataToShow = this.filterListForYouth(this.filterList(data));
+      }
+      if (this.state.filterType === "Seniors") {
+        dataToShow = this.filterListForSeniors(this.filterList(data));
+      }
+      if (this.state.filterType === "Fitness") {
+        dataToShow = this.filterListForFitness(this.filterList(data));
+      }
+      if (this.state.filterType === "Sports") {
+        dataToShow = this.filterListForSports(this.filterList(data));
       }
       return (
         
@@ -108,6 +144,7 @@ class Opportunities extends Component {
           {/* <Button onClick={this.showOnlyAnimals}>Animal</Button> */}
           {/* <Button onClick={this.showOnlyArts}>Arts</Button> */}
           <div className="container">
+      <Button onClick={this.showAll}>{this.state.filterType}</Button>
   <button type="button" class="button" onClick={this.handleButtonClick}>
     ☰
   </button>
@@ -124,6 +161,18 @@ class Opportunities extends Component {
         <li><Button onClick={this.showOnlyRac}>Racial/Ethnic</Button></li>
         <li><Button onClick={this.showOnlyHealth}>Health</Button></li>
         <li><Button onClick={this.showOnlyDisab}>Disabilities</Button></li>
+        <li><Button onClick={this.showOnlyHunger}>Hunger</Button></li>
+        <li><Button onClick={this.showOnlyHome}>Homelessness</Button></li>
+        <li><Button onClick={this.showOnlyCommunity}>Community</Button></li>
+        <li><Button onClick={this.showOnlyMusic}>Music</Button></li>
+        <li><Button onClick={this.showOnlyFaith}>Faith</Button></li>
+        <li><Button onClick={this.showOnlyVeterans}>Veterans</Button></li>
+        <li><Button onClick={this.showOnlyEducation}>Education</Button></li>
+        <li><Button onClick={this.showOnlyLGBTQIA}>LGBTQIA</Button></li>
+        <li><Button onClick={this.showOnlyYouth}>Youth</Button></li>
+        <li><Button onClick={this.showOnlySeniors}>Seniors</Button></li>
+        <li><Button onClick={this.showOnlyFitness}>Fitness</Button></li>
+        <li><Button onClick={this.showOnlySports}>Sports</Button></li>
 
 
       </ul>
@@ -218,6 +267,24 @@ class Opportunities extends Component {
     });
     return temp;
   }
+  filterListForHome(docs) {
+    var temp = [];
+    docs.forEach(doc => {
+      if (doc["Categories"].match("home")) {
+        temp.push(doc);
+      }
+    });
+    return temp;
+  }
+  filterListForHunger(docs) {
+    var temp = [];
+    docs.forEach(doc => {
+      if (doc["Categories"].match("hunger")) {
+        temp.push(doc);
+      }
+    });
+    return temp;
+  }
   filterListForWomen(docs) {
     var temp = [];
     docs.forEach(doc => {
@@ -290,6 +357,96 @@ class Opportunities extends Component {
     });
     return temp;
   }
+  filterListForCommunity(docs) {
+    var temp = [];
+    docs.forEach(doc => {
+      if (doc["Categories"].match("community")) {
+        temp.push(doc);
+      }
+    });
+    return temp;
+  }
+  filterListForMusic(docs) {
+    var temp = [];
+    docs.forEach(doc => {
+      if (doc["Categories"].match("music")) {
+        temp.push(doc);
+      }
+    });
+    return temp;
+  }
+    filterListForFaith(docs) {
+    var temp = [];
+    docs.forEach(doc => {
+      if (doc["Categories"].match("faith")) {
+        temp.push(doc);
+      }
+    });
+    return temp;
+  }
+  filterListForVeterans(docs) {
+    var temp = [];
+    docs.forEach(doc => {
+      if (doc["Categories"].match("veterans")) {
+        temp.push(doc);
+      }
+    });
+    return temp;
+  }
+  filterListForEducation(docs) {
+    var temp = [];
+    docs.forEach(doc => {
+      if (doc["Categories"].match("education")) {
+        temp.push(doc);
+      }
+    });
+    return temp;
+  }
+  filterListForLGBTQIA(docs) {
+    var temp = [];
+    docs.forEach(doc => {
+      if (doc["Categories"].match("lgbtqia")) {
+        temp.push(doc);
+      }
+    });
+    return temp;
+  }
+  filterListForYouth(docs) {
+    var temp = [];
+    docs.forEach(doc => {
+      if (doc["Categories"].match("youth")) {
+        temp.push(doc);
+      }
+    });
+    return temp;
+  }
+  filterListForSeniors(docs) {
+    var temp = [];
+    docs.forEach(doc => {
+      if (doc["Categories"].match("seniors")) {
+        temp.push(doc);
+      }
+    });
+    return temp;
+  }
+  filterListForFitness(docs) {
+    var temp = [];
+    docs.forEach(doc => {
+      if (doc["Categories"].match("fitness")) {
+        temp.push(doc);
+      }
+    });
+    return temp;
+  }
+  filterListForSports(docs) {
+    var temp = [];
+    docs.forEach(doc => {
+      if (doc["Categories"].match("sports")) {
+        temp.push(doc);
+      }
+    });
+    return temp;
+  }
   showAll = () => {
     this.setState({ filterType: "all" });
   };
@@ -297,32 +454,68 @@ class Opportunities extends Component {
   //   this.setState({ filterType: "onlyvalid" });
   // };
   showOnlyWomen = () => {
-    this.setState({ filterType: "women" });
+    this.setState({ filterType: "Women" });
   };
 
   showOnlyArts = () => {
-    this.setState({ filterType: "arts" });
+    this.setState({ filterType: "Arts" });
   };
   showOnlyDisab = () => {
-    this.setState({ filterType: "disab" });
+    this.setState({ filterType: "Disabilities" });
+  };
+  showOnlyHome = () => {
+    this.setState({ filterType: "Homelessness" });
   };
   showOnlyChildren = () => {
-    this.setState({ filterType: "children" });
+    this.setState({ filterType: "Children" });
   };
   showOnlyAnimals = () => {
-    this.setState({ filterType: "animals" });
+    this.setState({ filterType: "Animals" });
+  };
+  showOnlyHunger = () => {
+    this.setState({ filterType: "Hunger" });
   };
   showOnlyLegal = () => {
-    this.setState({ filterType: "legal" });
+    this.setState({ filterType: "Legal" });
   };
   showOnlyEnvironmental = () => {
-    this.setState({ filterType: "environmental" });
+    this.setState({ filterType: "Environmental" });
   };
   showOnlyRac = () => {
-    this.setState({ filterType: "rac" });
+    this.setState({ filterType: "Racial/Ethnic" });
   };
   showOnlyHealth = () => {
-    this.setState({ filterType: "health" });
+    this.setState({ filterType: "Health" });
+  };
+  showOnlyCommunity = () => {
+    this.setState({ filterType: "Community" });
+  };
+  showOnlyMusic = () => {
+    this.setState({ filterType: "Music" });
+  };
+  showOnlyFaith = () => {
+    this.setState({ filterType: "Faith" });
+  };
+  showOnlyVeterans = () => {
+    this.setState({ filterType: "Veterans" });
+  };
+  showOnlyEducation = () => {
+    this.setState({ filterType: "Education" });
+  };
+  showOnlyLGBTQIA = () => {
+    this.setState({ filterType: "LGBTQIA" });
+  };
+  showOnlyYouth = () => {
+    this.setState({ filterType: "Youth" });
+  };
+  showOnlySeniors = () => {
+    this.setState({ filterType: "Seniors" });
+  };
+  showOnlyFitness = () => {
+    this.setState({ filterType: "Fitness" });
+  };
+  showOnlySports = () => {
+    this.setState({ filterType: "Sports" });
   };
 }
 
