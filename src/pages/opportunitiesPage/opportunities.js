@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./opportunities.css";
 import Navbar from "../components/Navbar";
 import { Card, Button } from "semantic-ui-react";
-import { validate } from "../../utils/volunteer_validator";
+// import { validate } from "../../utils/volunteer_validator";
 //
 import Tabletop from "tabletop";
 //Dynamically pulls from google sheets: requires npm install tabletop
@@ -54,9 +54,9 @@ class Opportunities extends Component {
       if (this.state.filterType === "all") {
         dataToShow = data;
       }
-      if (this.state.filterType === "onlyvalid") {
-        dataToShow = this.filterList(data);
-      }
+      // if (this.state.filterType === "onlyvalid") {
+      //   dataToShow = this.filterList(data);
+      // }
       if (this.state.filterType === "women") {
         dataToShow = this.filterListForWomen(this.filterList(data));
       }
@@ -70,7 +70,7 @@ class Opportunities extends Component {
         <div className="OpportunitiesBody">
           <Navbar />
           <Button onClick={this.showAll}>ALL</Button>{" "}
-          <Button onClick={this.showOnlyValid}>Only Valid</Button>
+          {/* <Button onClick={this.showOnlyValid}>Only Valid</Button> */}
           <Button onClick={this.showOnlyWomen}>Women</Button>
           <Button onClick={this.showOnlyAnimals}>Animal</Button>
           <Button onClick={this.showOnlyArts}>Arts</Button>
@@ -146,9 +146,9 @@ class Opportunities extends Component {
   filterList(docs) {
     var temp = [];
     docs.forEach(doc => {
-      if (validate(doc)) {
+      // if (validate(doc)) {
         temp.push(doc);
-      }
+      // }
     });
     return temp;
   }
@@ -183,9 +183,9 @@ class Opportunities extends Component {
   showAll = () => {
     this.setState({ filterType: "all" });
   };
-  showOnlyValid = () => {
-    this.setState({ filterType: "onlyvalid" });
-  };
+  // showOnlyValid = () => {
+  //   this.setState({ filterType: "onlyvalid" });
+  // };
   showOnlyWomen = () => {
     this.setState({ filterType: "women" });
   };
