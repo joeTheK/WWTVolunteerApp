@@ -13,8 +13,10 @@ class MissionVision extends Component {
     }));
   };
   render() {
-    let missionStatement = "Mission Statement";
-    let visionStatement = "Vision Statement";
+    let missionStatement =
+      "Our mission is to encourage students to find volunteering opportunities, track service hours, and reach school-wide and individual goals.";
+    let visionStatement =
+      "Our vision is to promote positive change in both our students and our community that we serve.";
     return (
       <div>
         <span
@@ -38,7 +40,9 @@ class MissionVision extends Component {
         >
           Vision
         </span>
-        <p>{this.state.mission ? missionStatement : visionStatement}</p>
+        <p style={{ marginTop: "15%" }}>
+          {this.state.mission ? missionStatement : visionStatement}
+        </p>
       </div>
     );
   }
