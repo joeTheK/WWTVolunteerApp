@@ -13,11 +13,7 @@ class Community extends Component {
             <div className="feed">
               <TwitterTimelineEmbed
                 sourceType="profile"
-<<<<<<< HEAD
                 screenName="OwlHours"
-=======
-                screenName="Owl_Hours"
->>>>>>> a2f802e6084e770967e2ac412fa6d455ffac863d
                 data-chrome="nofooter noheader"
                 options={{ height: 600 }}
               />
