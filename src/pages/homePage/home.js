@@ -22,6 +22,8 @@ class Home extends Component {
     return (
       <div className="HomeBody">
         <Navbar />
+        <br></br>
+        <br></br>
         <div className="container">
           <div className="row">
             <div className="col-sm-8">
@@ -30,6 +32,7 @@ class Home extends Component {
                   <LogHourForm userName={this.state.userName} />
                 </div>
               </div>
+              <br></br>
               <div className="card">
                 <div className="card-body">
                   <MissionVision />
