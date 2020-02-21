@@ -1,9 +1,12 @@
 .HomeBody {
   text-align: center;
+  font-family: Quicksand;
+  font-style: normal;
+  background-image: linear-gradient(#030D61,#477B80,#7CB79A, #C4C4C4);
 }
 
 .inputStyle {
-  background: #f1edee;
+  background: whitesmoke;
   border: none;
   border-radius: 5px;
   height: 25px;

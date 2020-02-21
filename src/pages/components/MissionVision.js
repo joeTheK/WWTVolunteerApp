@@ -19,8 +19,9 @@ class MissionVision extends Component {
       <div>
         <span
           onClick={this.handleClick}
+          className="spanLink"
           style={{
-            color: this.state.mission ? "#81c784" : "black",
+            color: this.state.mission ? "#030D61" : "black",
             textDecoration: this.state.mission ? "underline" : "none"
           }}
         >
@@ -29,8 +30,9 @@ class MissionVision extends Component {
         <span style={{ marginLeft: "5px", marginRight: "5px" }}>|</span>
         <span
           onClick={this.handleClick}
+          className="spanLink"
           style={{
-            color: this.state.mission ? "black" : "#81c784",
+            color: this.state.mission ? "black" : "#030D61",
             textDecoration: this.state.mission ? "none" : "underline"
           }}
         >
