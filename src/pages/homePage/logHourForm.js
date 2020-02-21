@@ -43,6 +43,7 @@ class LogHourForm extends Component {
       <form onSubmit={this.mySubmitHandler}>
         <h1>Hello {this.props.userName}</h1>
         <input
+          id="hours"
           className="inputStyle"
           type="number"
           placeholder="Hours Served"
@@ -50,6 +51,7 @@ class LogHourForm extends Component {
         />
         <br />
         <input
+          id="site"
           className="inputStyle"
           type="text"
           placeholder="Site Name"
@@ -57,6 +59,7 @@ class LogHourForm extends Component {
         ></input>
         <br />
         <input
+          id="address"
           className="inputStyle"
           type="text"
           placeholder="Site Address"
@@ -64,6 +67,7 @@ class LogHourForm extends Component {
         ></input>
         <br />
         <input
+          id="email"
           className="inputStyle"
           type="email"
           placeholder="Email of Coordinator"
