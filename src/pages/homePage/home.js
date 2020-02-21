@@ -9,7 +9,8 @@ class Home extends Component {
     super(props);
     this.state = {
       userName: "User",
-      userPic: "https://unsplash.com/photos/BlGmdY18CFQ",
+      userPic:
+        "https://images.pexels.com/photos/736716/pexels-photo-736716.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
       progressComplete: 87
     };
   }
@@ -26,20 +27,27 @@ class Home extends Component {
         <br></br>
         <div className="container">
           <div className="row">
-            <div className="col-sm-8">
+            <div className="col-sm-7">
               <div className="card">
-                <div className="card-body">
+                <div className="card-body" style={{ height: "245px" }}>
                   <LogHourForm userName={this.state.userName} />
                 </div>
               </div>
               <br></br>
-              <div className="card">
-                <div className="card-body">
+              <div className="card" style={{ height: "245px" }}>
+                <div
+                  className="card-body"
+                  style={{
+                    paddingLeft: "25%",
+                    paddingRight: "25%",
+                    marginBottom: "5px"
+                  }}
+                >
                   <MissionVision />
                 </div>
               </div>
             </div>
-            <div className="col-sm-4">
+            <div className="col-sm-5">
               {/* Side Bar */}
               <div className="card">
                 <div className="card-body">
@@ -47,6 +55,7 @@ class Home extends Component {
                     src={this.state.userPic}
                     alt="User Profile"
                     className="img-fluid img-profile"
+                    style={{ marginBottom: "5px" }}
                   />
                   <div className="progress">
                     <div
