@@ -42,7 +42,10 @@
     color: red;
   }
 }
-
+.schenk{
+  height:10%;
+  width:10%;
+}
 @media only screen and (max-width: 500px) {
   .boi {
     padding: 10px;

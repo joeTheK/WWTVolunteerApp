@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./components.css";
+import { logDOM } from "@testing-library/react";
+import logo from "./logo.jpg";
 
 class Navbar extends Component {
   constructor(props) {
@@ -27,7 +29,11 @@ class Navbar extends Component {
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <a className="navbar-brand" href="/home">
-          <img src="src\pages\components\logo-long.png" alt="OwlHours"/>
+        <img
+          src={logo}
+          alt="OwlHours"
+          className="logo"     
+         />
         </a>
         <button
           onClick={this.toggleNavbar}
