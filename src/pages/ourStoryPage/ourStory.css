@@ -1,12 +1,13 @@
-@import url("https://fonts.googleapis.com/css?family=Anton");
+/* @import url("https://fonts.googleapis.com/css?family=Anton");
 
 .body {
   font-family: "Anton", sans-serif;
-}
+} */
 
 /* .firstSec {
   text-align: center;
   margin-top: 12%;
+  color: #030d61;
 }
 
 .firstSecA {
@@ -15,4 +16,74 @@
 
 .firstSecB {
   font-size: 100px;
+  margin-top: 5%;
 } */
+.topPhoto {
+  width: 100%;
+  justify-content: center;
+  object-fit: cover;
+}
+.topboys {
+  text-align: center;
+  margin-top: 1%;
+}
+.cande {
+  font-size: 40px;
+  text-align: center;
+}
+
+.topboyA {
+  font-size: 25px;
+}
+.topboyB {
+  font-size: 25px;
+  text-decoration: underline;
+  text-align: center;
+}
+/* .topgirl {
+  margin-top: 3.5%;
+} */
+/* .hrbruh {
+  border: 0;
+  height: 1px;
+  background: rgb(100, 97, 97);
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+  width: 50%;
+  margin: auto;
+  margin-top: 2%;
+} */
+.bigStats {
+  text-align: left;
+}
+.stats {
+  margin-top: 4%;
+}
+ul {
+  list-style-type: disc;
+  font-size: 15px;
+}
+.card-body {
+  margin-top: 0%;
+  text-align: center;
+}
+.btmPhoto {
+  margin-top: 4%;
+  height: 450px;
+}
+.specBtmCont {
+  margin-stop: 4%;
+}
+
+.pollRes {
+  margin-top: 10%;
+  font-size: 18px;
+}
+.stat {
+  font-size: 24px;
+}
+.secondarySpacing {
+  margin-top: 20%;
+}
+.yeetbruh {
+  text-align: right;
+}
