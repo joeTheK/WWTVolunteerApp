@@ -24,10 +24,10 @@
   }
   .feed {
     grid-area: feed;
-    padding-left: 30%;
-    padding-top: 8%;
+    padding-left: 5%;
+    padding-top: 5%;
     margin: auto;
-  }
+   }
   .maps {
     grid-area: maps;
     padding: 1em;
