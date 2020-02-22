@@ -1,23 +1,33 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./components.css";
-import { logDOM } from "@testing-library/react";
+// import { logDOM } from "@testing-library/react";
 import logo from "./logo.jpg";
+import firebase from '../../config/firebaseConfig.config';
 
 class Navbar extends Component {
   constructor(props) {
     super(props);
+    this.logout = this.logout.bind(this);
     this.toggleNavbar = this.toggleNavbar.bind(this);
     this.state = {
       collapsed: true
     };
   }
+
+  //Logout
+  logout() {
+    firebase.auth().signOut();
+    document.location.href = '/';
+  }
+
   //Using State for Nav Method https://www.bennettnotes.com/bootstrap-navbar-collapse-reactjs/
   toggleNavbar() {
     this.setState({
       collapsed: !this.state.collapsed
     });
   }
+
   render() {
     const collapsed = this.state.collapsed;
     const classOne = collapsed
@@ -64,11 +74,12 @@ class Navbar extends Component {
                 Opportunities
               </Link>
             </li>
-            <li className="nav-item"s>
+            <li className="nav-item">
               <Link className="nav-link" to="/ourstory">
                 Our Story
               </Link>
             </li>
+            <button onClick={this.logout}>Logout</button>
           </ul>
         </div>
       </nav>

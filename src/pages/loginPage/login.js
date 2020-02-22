@@ -5,10 +5,8 @@ import "typeface-quicksand";
 
 //FireBase
 import firebase from "firebase";
-import firebaseConfig from "../../firebaseConfig.config";
+import fire from "../../config/firebaseConfig.config";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
-
-firebase.initializeApp(firebaseConfig);
 
 class Login extends Component {
   state = { isSignedIn: false }
@@ -23,7 +21,7 @@ class Login extends Component {
   }
 
   componentDidMount = () => {
-    firebase.auth().onAuthStateChanged(user => {
+    fire.auth().onAuthStateChanged(user => {
       this.setState({ isSignedIn: !!user })
       if(user) {
         document.location.href = '/home';
@@ -42,7 +40,7 @@ class Login extends Component {
         <div id="button">
           <StyledFirebaseAuth
             uiConfig={this.uiConfig}
-            firebaseAuth={firebase.auth()}
+            firebaseAuth={fire.auth()}
           />
           {/* <GoogleLogin
           clientId="486383932824-76bvkkigh5vsmbkthvljcnae2t19u16j.apps.googleusercontent.com"
