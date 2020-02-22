@@ -5,16 +5,44 @@ import MissionVision from "../components/MissionVision";
 import "./home.css";
 import corwin from "./corwin.jpg";
 
+//Firebase
+import fire from '../../config/firebaseConfig.config';
+// import { response } from "express";
+
 class Home extends Component {
-  constructor(props) {
-    super(props);
+
+constructor(props) {
+  super(props);
     this.state = {
-      userName: "User",
+      name: '', //This is what our data will eventually be loaded into
       userPic: "corwin.jpg",
       progressComplete: 87
     };
   }
+
+  componentDidMount() {
+    var that = this;
+    const ensureAuth = function() {
+      return new Promise((resolve,reject) =>  {
+          const user = fire.auth().currentUser;
+          console.log("Test 1");
+          if (user != null) {
+            resolve(user);
+          }
+      }).then(function(variab) {
+        let name = variab.displayName;
+        that.setState({name: name})
+        console.log(that.state.name);
+      });
+    }
+    
+    setTimeout(ensureAuth, 500)
+  }
+  
   render() {
+    if (!this.state.name) {
+        return <div>Loading</div>
+    }
     const progressStyle = {
       width: this.state.progressComplete + "%",
       color: "white",
@@ -30,7 +58,7 @@ class Home extends Component {
             <div className="col-sm-7">
               <div className="card">
                 <div className="card-body" style={{ height: "245px" }}>
-                  <LogHourForm userName={this.state.userName} />
+                  <LogHourForm userName={this.state.name} />
                 </div>
               </div>
               <br></br>

@@ -31,17 +31,25 @@
     background-color: green;
   }
   .incent {
-    background-color: blue;
+    background-color: white;
     padding: 1em;
     grid-area: incent;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
+    font-family: 'Quicksand', sans-serif;
   }
   .test {
     color: red;
   }
 }
-
+.trophy{
+  height:2%;
+  width:2%;
+}
+.schenk{
+  height:5%;
+  width:5%;
+}
 @media only screen and (max-width: 500px) {
   .boi {
     padding: 10px;
@@ -59,8 +67,9 @@
     background-color: green;
   }
   .incent {
-    background-color: blue;
+    background-color: white;
     padding: 1em;
+    font-family: 'Quicksand', sans-serif;
   }
   .test {
     color: red;
