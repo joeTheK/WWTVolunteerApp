@@ -17,29 +17,21 @@ import Opportunities from "./pages/opportunitiesPage/opportunities";
 import ourStory from "./pages/ourStoryPage/ourStoryPage";
 // import Api from "./server/api/cities.js"
 
-//FireBase
-import withFirebaseAuth from 'react-with-firebase-auth'
-import * as firebase from 'firebase/app';
-import 'firebase/auth';
-import firebaseConfig from './firebaseConfig';
-
-const firebaseApp = firebase.initializeApp(firebaseConfig);
-
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/" component={Login} />
-        <Route exact path="/home" component={Home} />
-        <Route exact path="/community" component={Community} />
-        <Route exact path="/opportunities" component={Opportunities} />
-        <Route exact path="/ourstory" component={ourStory} />
-        <Route exact path="/opportunities/:op" component={Opportunities} />
-        <Route exact path="/404" component={NotFound} />
-        {/* <Route exact path="/api" component={Api} /> */}
-        <Redirect to="/404" />
-      </Switch>
-    </Router>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Login} />
+          <Route exact path="/home" component={Home} />
+          <Route exact path="/community" component={Community} />
+          <Route exact path="/opportunities" component={Opportunities} />
+          <Route exact path="/ourstory" component={ourStory} />
+          <Route exact path="/opportunities/:op" component={Opportunities} />
+          <Route exact path="/404" component={NotFound} />
+          {/* <Route exact path="/api" component={Api} /> */}
+          <Redirect to="/404" />
+        </Switch>
+      </Router>
   );
 }
 
