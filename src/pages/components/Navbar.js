@@ -27,7 +27,7 @@ class Navbar extends Component {
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <a className="navbar-brand" href="/home">
-          OwlHours
+          <img src="src\pages\components\logo-long.png" alt="OwlHours"/>
         </a>
         <button
           onClick={this.toggleNavbar}
