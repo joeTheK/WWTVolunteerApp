@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import LogHourForm from "./logHourForm";
 import MissionVision from "../components/MissionVision";
 import "./home.css";
-import corwin from "./corwin.jpg";
+// import corwin from "./corwin.jpg";
 
 //Firebase
 import fire from '../../config/firebaseConfig.config';
@@ -14,8 +14,7 @@ class Home extends Component {
 constructor(props) {
   super(props);
     this.state = {
-      name: '', //This is what our data will eventually be loaded into
-      userPic: "corwin.jpg",
+      user: null,
       progressComplete: 87
     };
   }
@@ -25,14 +24,12 @@ constructor(props) {
     const ensureAuth = function() {
       return new Promise((resolve,reject) =>  {
           const user = fire.auth().currentUser;
-          console.log("Test 1");
           if (user != null) {
             resolve(user);
           }
       }).then(function(variab) {
-        let name = variab.displayName;
-        that.setState({name: name})
-        console.log(that.state.name);
+        console.log(variab);
+        that.setState({user: variab})
       });
     }
     
@@ -40,7 +37,7 @@ constructor(props) {
   }
   
   render() {
-    if (!this.state.name) {
+    if (!this.state.user) {
         return <div>Loading</div>
     }
     const progressStyle = {
@@ -58,7 +55,7 @@ constructor(props) {
             <div className="col-sm-7">
               <div className="card">
                 <div className="card-body" style={{ height: "245px" }}>
-                  <LogHourForm userName={this.state.name} />
+                  <LogHourForm userName={this.state.user.displayName} />
                 </div>
               </div>
               <br></br>
@@ -80,7 +77,8 @@ constructor(props) {
               <div className="card">
                 <div className="card-body">
                   <img
-                    src={corwin}
+                    // src={corwin} 
+                    src={this.state.user.photoURL}
                     alt="User Profile"
                     className="img-fluid img-profile"
                     style={{ marginBottom: "5px", height: "250px" }}
@@ -98,7 +96,7 @@ constructor(props) {
                     </div>
                   </div>
                   <p>
-                    {this.state.userName} has{" "}
+                    {this.state.user.firstName} has{" "}
                     <span style={{ color: "#030D61", fontWeight: "bold" }}>
                       {this.state.progressComplete}/100
                     </span>{" "}

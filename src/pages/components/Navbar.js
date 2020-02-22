@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./components.css";
 // import { logDOM } from "@testing-library/react";
 import logo from "./logo.jpg";
-import firebase from '../../config/firebaseConfig.config';
+import firebase from "../../config/firebaseConfig.config";
 
 class Navbar extends Component {
   constructor(props) {
@@ -18,7 +18,7 @@ class Navbar extends Component {
   //Logout
   logout() {
     firebase.auth().signOut();
-    document.location.href = '/';
+    document.location.href = "/";
   }
 
   //Using State for Nav Method https://www.bennettnotes.com/bootstrap-navbar-collapse-reactjs/
@@ -39,11 +39,7 @@ class Navbar extends Component {
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <a className="navbar-brand" href="/home">
-        <img
-          src={logo}
-          alt="OwlHours"
-          className="logo"     
-         />
+          <img src={logo} alt="OwlHours" className="logo" />
         </a>
         <button
           onClick={this.toggleNavbar}
@@ -76,10 +72,14 @@ class Navbar extends Component {
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/ourstory">
-                Our Story
+                Story
               </Link>
             </li>
-            <button onClick={this.logout}>Logout</button>
+            <li className="nav-item">
+              <button className="btn btn-outline-warning" onClick={this.logout}>
+                Logout
+              </button>
+            </li>
           </ul>
         </div>
       </nav>
