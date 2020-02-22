@@ -76,7 +76,7 @@ class Navbar extends Component {
               </Link>
             </li>
             <li className="nav-item">
-              <button className="btn btn-outline-warning" onClick={this.logout}>
+              <button className="btn btn-outline-primary" onClick={this.logout}>
                 Logout
               </button>
             </li>
