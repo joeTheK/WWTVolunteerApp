@@ -42,9 +42,13 @@
     color: red;
   }
 }
+.trophy{
+  height:2%;
+  width:2%;
+}
 .schenk{
-  height:10%;
-  width:10%;
+  height:5%;
+  width:5%;
 }
 @media only screen and (max-width: 500px) {
   .boi {
