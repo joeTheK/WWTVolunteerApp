@@ -24,6 +24,9 @@
   }
   .feed {
     grid-area: feed;
+    padding-left: 30%;
+    padding-top: 8%;
+    margin: auto;
   }
   .maps {
     grid-area: maps;
@@ -34,8 +37,8 @@
     background-color: white;
     padding: 1em;
     grid-area: incent;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
+    border-radius: 5px;
     font-family: 'Quicksand', sans-serif;
   }
   .test {
