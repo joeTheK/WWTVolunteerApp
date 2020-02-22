@@ -25,14 +25,13 @@ constructor(props) {
     const ensureAuth = function() {
       return new Promise((resolve,reject) =>  {
           const user = fire.auth().currentUser;
-          console.log("Test 1");
           if (user != null) {
             resolve(user);
           }
       }).then(function(variab) {
+        console.log(variab);
         let name = variab.displayName;
         that.setState({name: name})
-        console.log(that.state.name);
       });
     }
     
@@ -80,7 +79,7 @@ constructor(props) {
               <div className="card">
                 <div className="card-body">
                   <img
-                    src={corwin}
+                    src={corwin} 
                     alt="User Profile"
                     className="img-fluid img-profile"
                     style={{ marginBottom: "5px", height: "250px" }}

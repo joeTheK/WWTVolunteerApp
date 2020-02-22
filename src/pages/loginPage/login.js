@@ -37,7 +37,6 @@ class Login extends Component {
         <h1 id="counter">1 0 0 0</h1>
         <h2 id="text">Hours Served </h2>
         <br></br>
-        <div id="button">
           <StyledFirebaseAuth
             uiConfig={this.uiConfig}
             firebaseAuth={fire.auth()}
@@ -49,8 +48,6 @@ class Login extends Component {
           onFailure={console.log("bad")}
           cookiePolicy={'single_host_origin'}
           /> */}
-        </div>
-        )}
       </div>
     </div>
   )}
