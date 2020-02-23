@@ -75,7 +75,7 @@ class ourStory extends Component {
           <div className="row ">
             <div className="col-7">
               {/* <img src={campBarn} alt="Filler" className="topPhoto" /> */}
-              <img src={homelessB} alt="Filler" className="topPhoto btmPhoto" />
+              <img src={homelessB} alt="Filler" className="topPhoto btmPhoto" id="pic" />
               {/* <img src={ria} alt="Filler" className="topPhoto" /> */}
             </div>
             <div className="col-5 pollRes">
@@ -111,7 +111,7 @@ class ourStory extends Component {
               </div>
             </div>
             <div className="col-7">
-              <img src={campBarn} alt="Filler" className="topPhoto btmPhoto" />
+              <img src={campBarn} alt="Filler" className="topPhoto btmPhoto" id="pic2"/>
               {/* <img src={ria} alt="Filler" className="topPhoto" /> */}
             </div>
           </div>
