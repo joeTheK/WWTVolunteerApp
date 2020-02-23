@@ -34,12 +34,10 @@ class ourStory extends Component {
                 <span className="topboyA">
                   One of our six core values at CSMB is{" "}
                 </span>
-                <span className="topboyB">compassion and ethics</span>
+                <span className="topboyB">Compassion and Ethics</span>
               </div>
-              <p>
-                All students spend a minimum of 100 hours within their
-                communities, volunteering and serving
-              </p>
+              <footer class="blockquote-footer" id="bottom">All students spend a minimum of 100 hours within their
+                communities, volunteering and serving </footer>
             </div>
           </div>
         </div>
@@ -50,7 +48,7 @@ class ourStory extends Component {
 
         <div className="container">
           <div className="row stats">
-            <div className="col-4 cande">CSMB Students</div>
+            <div className="col-4 cande" id="students">CSMB Students</div>
             <div className="col-4 bigStats">
               <ul>
                 <li className="">Have served at 594 locations</li>
@@ -77,7 +75,7 @@ class ourStory extends Component {
           <div className="row ">
             <div className="col-7">
               {/* <img src={campBarn} alt="Filler" className="topPhoto" /> */}
-              <img src={homelessB} alt="Filler" className="topPhoto btmPhoto" />
+              <img src={homelessB} alt="Filler" className="topPhoto btmPhoto" id="pic" />
               {/* <img src={ria} alt="Filler" className="topPhoto" /> */}
             </div>
             <div className="col-5 pollRes">
@@ -113,7 +111,7 @@ class ourStory extends Component {
               </div>
             </div>
             <div className="col-7">
-              <img src={campBarn} alt="Filler" className="topPhoto btmPhoto" />
+              <img src={campBarn} alt="Filler" className="topPhoto btmPhoto" id="pic2"/>
               {/* <img src={ria} alt="Filler" className="topPhoto" /> */}
             </div>
           </div>
