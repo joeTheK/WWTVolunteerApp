@@ -67,26 +67,20 @@ class LogHourForm extends Component {
         ></input>
         <br></br>
         <input
-          style={{
-            // float: "right",
-            marginLeft: "68px"
-          }}
           id="email"
           className="inputStyle"
           type="email"
           placeholder="Email of Coordinator"
           onChange={this.emailChangeHandler}
         ></input>
-
+        <br></br>
         <input
           type="submit"
           className="btn btn-info"
           style={{
             marginTop: "5px",
             backgroundColor: "#030D61",
-            borderColor: "#030D61",
-            float: "right",
-            top: "20rem"
+            borderColor: "#030D61"
           }}
         />
       </form>
