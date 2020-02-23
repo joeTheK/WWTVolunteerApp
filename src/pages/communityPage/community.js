@@ -17,6 +17,8 @@ class Community extends Component {
   componentDidMount() {
     Tabletop.init({
       key: '14Ik5uHzguQFeYxEyFgcer6TQHsxLV7MiunLkhKplYRM',
+
+      
       callback: googleData => {
         console.log('MAP DATA --->', googleData)
       },
