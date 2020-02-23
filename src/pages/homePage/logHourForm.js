@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import "./home.css";
+// import '../index.ts';
+import updateHours from '../../index.ts'
+import fire from "../../config/firebaseConfig.config";
 
 class LogHourForm extends Component {
   constructor(props) {
@@ -12,6 +15,7 @@ class LogHourForm extends Component {
     };
   }
   mySubmitHandler = event => {
+    const user = fire.auth().currentUser();
     event.preventDefault();
     alert(
       "You are submitting with " +
@@ -24,6 +28,7 @@ class LogHourForm extends Component {
         this.state.coordEmail +
         " coordEmail"
     );
+    updateHours(user, this.state.hours);
     //export this.state.totalHours
   };
   hourChangeHandler = event => {

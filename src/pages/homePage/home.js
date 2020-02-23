@@ -15,7 +15,7 @@ constructor(props) {
   super(props);
     this.state = {
       user: null,
-      progressComplete: 87
+      progressComplete: fire.auth().currentUser.hours,
     };
   }
 
