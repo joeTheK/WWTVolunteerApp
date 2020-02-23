@@ -3,18 +3,43 @@ import Navbar from "../components/Navbar";
 import LogHourForm from "./logHourForm";
 import MissionVision from "../components/MissionVision";
 import "./home.css";
-import corwin from "./corwin.jpg";
+// import corwin from "./corwin.jpg";
+
+//Firebase
+import fire from '../../config/firebaseConfig.config';
+// import { response } from "express";
 
 class Home extends Component {
-  constructor(props) {
-    super(props);
+
+constructor(props) {
+  super(props);
     this.state = {
-      userName: "User",
-      userPic: "corwin.jpg",
+      user: null,
       progressComplete: 87
     };
   }
+
+  componentDidMount() {
+    var that = this;
+    const ensureAuth = function() {
+      return new Promise((resolve,reject) =>  {
+          const user = fire.auth().currentUser;
+          if (user != null) {
+            resolve(user);
+          }
+      }).then(function(variab) {
+        console.log(variab);
+        that.setState({user: variab})
+      });
+    }
+    
+    setTimeout(ensureAuth, 500)
+  }
+  
   render() {
+    if (!this.state.user) {
+        return <div>Loading</div>
+    }
     const progressStyle = {
       width: this.state.progressComplete + "%",
       color: "white",
@@ -30,7 +55,7 @@ class Home extends Component {
             <div className="col-sm-7">
               <div className="card">
                 <div className="card-body" style={{ height: "245px" }}>
-                  <LogHourForm userName={this.state.userName} />
+                  <LogHourForm userName={this.state.user.displayName} />
                 </div>
               </div>
               <br></br>
@@ -52,7 +77,8 @@ class Home extends Component {
               <div className="card">
                 <div className="card-body">
                   <img
-                    src={corwin}
+                    // src={corwin} 
+                    src={this.state.user.photoURL}
                     alt="User Profile"
                     className="img-fluid img-profile"
                     style={{ marginBottom: "5px", height: "250px" }}
@@ -70,7 +96,7 @@ class Home extends Component {
                     </div>
                   </div>
                   <p>
-                    {this.state.userName} has{" "}
+                    {this.state.user.firstName} has{" "}
                     <span style={{ color: "#030D61", fontWeight: "bold" }}>
                       {this.state.progressComplete}/100
                     </span>{" "}

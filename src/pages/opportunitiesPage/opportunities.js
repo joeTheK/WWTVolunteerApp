@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./opportunities.css";
 import Navbar from "../components/Navbar";
 import { Card, Button } from "semantic-ui-react";
+import { faFilter } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { Dropdown } from 'semantic-ui-react'
 
 // import { validate } from "../../utils/volunteer_validator";
@@ -145,8 +147,10 @@ class Opportunities extends Component {
           {/* <Button onClick={this.showOnlyArts}>Arts</Button> */}
           <div className="container">
       <Button onClick={this.showAll}>{this.state.filterType}</Button>
-  <button type="button" class="button" onClick={this.handleButtonClick}>
-    ☰
+  <button type="button" class="ui button icon only" onClick={this.handleButtonClick}>
+  <FontAwesomeIcon icon={faFilter} />
+
+
   </button>
   {this.state.open && (
     <div class="dropdown">
@@ -451,73 +455,96 @@ class Opportunities extends Component {
     return temp;
   }
   showAll = () => {
+    this.handleButtonClick();
+
     this.setState({ filterType: "All" });
   };
   // showOnlyValid = () => {
   //   this.setState({ filterType: "onlyvalid" });
   // };
   showOnlyWomen = () => {
+    this.handleButtonClick();
     this.setState({ filterType: "Women" });
   };
 
   showOnlyArts = () => {
+    this.handleButtonClick();
     this.setState({ filterType: "Arts" });
   };
   showOnlyDisab = () => {
+    this.handleButtonClick();
     this.setState({ filterType: "Disabilities" });
   };
   showOnlyHome = () => {
+    this.handleButtonClick();
     this.setState({ filterType: "Homelessness" });
   };
   showOnlyChildren = () => {
+    this.handleButtonClick();
     this.setState({ filterType: "Children" });
   };
   showOnlyAnimals = () => {
+    this.handleButtonClick();
     this.setState({ filterType: "Animals" });
   };
   showOnlyHunger = () => {
+    this.handleButtonClick();
     this.setState({ filterType: "Hunger" });
   };
   showOnlyLegal = () => {
+    this.handleButtonClick();
     this.setState({ filterType: "Legal" });
   };
   showOnlyEnvironmental = () => {
+    this.handleButtonClick();
     this.setState({ filterType: "Environmental" });
   };
   showOnlyRac = () => {
+    this.handleButtonClick();
     this.setState({ filterType: "Racial/Ethnic" });
   };
   showOnlyHealth = () => {
+    this.handleButtonClick();
     this.setState({ filterType: "Health" });
   };
   showOnlyCommunity = () => {
+    this.handleButtonClick();
     this.setState({ filterType: "Community" });
   };
   showOnlyMusic = () => {
+    this.handleButtonClick();
     this.setState({ filterType: "Music" });
   };
   showOnlyFaith = () => {
+    this.handleButtonClick();
     this.setState({ filterType: "Faith" });
   };
   showOnlyVeterans = () => {
+    this.handleButtonClick();
     this.setState({ filterType: "Veterans" });
   };
   showOnlyEducation = () => {
+    this.handleButtonClick();
     this.setState({ filterType: "Education" });
   };
   showOnlyLGBTQIA = () => {
+    this.handleButtonClick();
     this.setState({ filterType: "LGBTQIA" });
   };
   showOnlyYouth = () => {
+    this.handleButtonClick();
     this.setState({ filterType: "Youth" });
   };
   showOnlySeniors = () => {
+    this.handleButtonClick();
     this.setState({ filterType: "Seniors" });
   };
   showOnlyFitness = () => {
+    this.handleButtonClick();
     this.setState({ filterType: "Fitness" });
   };
   showOnlySports = () => {
+    this.handleButtonClick();
     this.setState({ filterType: "Sports" });
   };
 }
