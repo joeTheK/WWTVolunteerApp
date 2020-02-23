@@ -151,14 +151,15 @@ class Opportunities extends Component {
   {this.state.open && (
     <div class="dropdown">
       <ul className = "list">
-        <li><Button onClick={this.showAll}>ALL</Button>{" "}</li>
+      <li><Button onClick={this.showOnlyRac}>Racial/Ethnic</Button></li>
         <li><Button onClick={this.showOnlyWomen}>Women</Button></li>
         <li><Button onClick={this.showOnlyAnimals}>Animal</Button></li>
         <li><Button onClick={this.showOnlyArts}>Arts</Button></li>
         <li><Button onClick={this.showOnlyChildren}>Children</Button></li>
         <li><Button onClick={this.showOnlyEnvironmental}>Environmental</Button></li>
         <li><Button onClick={this.showOnlyLegal}>Legal</Button></li>
-        <li><Button onClick={this.showOnlyRac}>Racial/Ethnic</Button></li>
+        <li><Button onClick={this.showAll}>ALL</Button>{" "}</li>
+
         </ul>
         <ul className = "list">
         <li><Button onClick={this.showOnlyHealth}>Health</Button></li>
