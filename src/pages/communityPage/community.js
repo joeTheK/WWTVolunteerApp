@@ -4,8 +4,25 @@ import Navbar from "../components/Navbar";
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 import schenk from "./schenk.png";
 import trophy from "./trophy.png"
+import Tabletop from 'tabletop';
+
 
 class Community extends Component {
+  constructor() {
+    super()
+    this.state = {
+      data: []
+    }
+  }
+  componentDidMount() {
+    Tabletop.init({
+      key: '14Ik5uHzguQFeYxEyFgcer6TQHsxLV7MiunLkhKplYRM',
+      callback: googleData => {
+        console.log('MAP DATA --->', googleData)
+      },
+      simpleSheet: true
+    })
+  }
   render() {
     return (
       <React.Fragment>
