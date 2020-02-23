@@ -6,7 +6,6 @@ import campBarn from "./campBarnabas.JPG";
 import homelessB from "./homelessBags.JPG";
 // import ria from "./rianna.JPG";
 
-
 class ourStory extends Component {
   constructor(props) {
     super(props);
@@ -37,7 +36,7 @@ class ourStory extends Component {
                 </span>
                 <span className="topboyB">Compassion and Ethics</span>
               </div>
-              <footer className="blockquote-footer" id="bottom">All students spend a minimum of 100 hours within their
+              <footer class="blockquote-footer" id="bottom">All students spend a minimum of 100 hours within their
                 communities, volunteering and serving </footer>
             </div>
           </div>
@@ -76,7 +75,7 @@ class ourStory extends Component {
           <div className="row ">
             <div className="col-7">
               {/* <img src={campBarn} alt="Filler" className="topPhoto" /> */}
-              <img src={homelessB} alt="Filler" className="topPhoto btmPhoto" id="pic" />
+              <img src={homelessB} alt="Filler" className="topPhoto btmPhoto" />
               {/* <img src={ria} alt="Filler" className="topPhoto" /> */}
             </div>
             <div className="col-5 pollRes">
@@ -99,7 +98,7 @@ class ourStory extends Component {
           <div className="row ">
             <div className="col-5 pollRes yeetbruh">
               <div>
-                <span className="stat" >43.9%</span>
+                <span className="stat">43.9%</span>
                 <span> of students have no logged hours</span>
               </div>
               <div className="secondarySpacing">
@@ -112,7 +111,7 @@ class ourStory extends Component {
               </div>
             </div>
             <div className="col-7">
-              <img src={campBarn} alt="Filler" className="topPhoto btmPhoto" id="pic2"/>
+              <img src={campBarn} alt="Filler" className="topPhoto btmPhoto" />
               {/* <img src={ria} alt="Filler" className="topPhoto" /> */}
             </div>
           </div>
