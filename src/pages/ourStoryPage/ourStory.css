@@ -19,7 +19,7 @@
   font-size: 100px;
   margin-top: 5%;
 } */
-@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
 .topPhoto {
   width: 100%;
   justify-content: center;
@@ -38,16 +38,16 @@
   font-size: 25px;
 }
 .topboyB {
-  font-size: 35px;
+  font-size: 28px;
   text-align: center;
-  color:#0d47a1 ;
+  color: #0d47a1;
   font-family: Quicksand;
 }
-#students{
+#students {
   font-family: Quicksand;
   color: #0d47a1;
 }
-#bottom{
+#bottom {
   font-size: 13px;
 }
 /* .topgirl {
@@ -69,10 +69,10 @@
   margin-top: 4%;
   font-family: Quicksand;
 }
-#pic{
+#pic {
   border-radius: 10px;
 }
-#pic2{
+#pic2 {
   border-radius: 10px;
 }
 ul {
@@ -105,4 +105,3 @@ ul {
 .yeetbruh {
   text-align: right;
 }
-

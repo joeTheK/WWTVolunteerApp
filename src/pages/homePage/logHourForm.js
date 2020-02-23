@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import "./home.css";
+// import '../index.ts';
+import updateHours from '../../index.ts'
+import fire from "../../config/firebaseConfig.config";
 
 class LogHourForm extends Component {
   constructor(props) {
@@ -12,6 +15,7 @@ class LogHourForm extends Component {
     };
   }
   mySubmitHandler = event => {
+    const user = fire.auth().currentUser();
     event.preventDefault();
     alert(
       "You are submitting with " +
@@ -24,6 +28,7 @@ class LogHourForm extends Component {
         this.state.coordEmail +
         " coordEmail"
     );
+    updateHours(user, this.state.hours);
     //export this.state.totalHours
   };
   hourChangeHandler = event => {
@@ -67,26 +72,20 @@ class LogHourForm extends Component {
         ></input>
         <br></br>
         <input
-          style={{
-            // float: "right",
-            marginLeft: "68px"
-          }}
           id="email"
           className="inputStyle"
           type="email"
           placeholder="Email of Coordinator"
           onChange={this.emailChangeHandler}
         ></input>
-
+        <br></br>
         <input
           type="submit"
           className="btn btn-info"
           style={{
             marginTop: "5px",
             backgroundColor: "#030D61",
-            borderColor: "#030D61",
-            float: "right",
-            top: "20rem"
+            borderColor: "#030D61"
           }}
         />
       </form>
