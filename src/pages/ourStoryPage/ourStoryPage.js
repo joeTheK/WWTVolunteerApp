@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import Navbar from "../components/Navbar";
 import "./ourStory.css";
 import MissionVision from "../components/MissionVisionCopy";
-import campBarn from "./campBarnabas.JPG";
+// import campBarn from "./campBarnabas.JPG";
 import homelessB from "./homelessBags.JPG";
+import sludm from "./sludm.JPG";
 // import ria from "./rianna.JPG";
 
 class ourStory extends Component {
@@ -36,8 +37,10 @@ class ourStory extends Component {
                 </span>
                 <span className="topboyB">Compassion and Ethics</span>
               </div>
-              <footer class="blockquote-footer" id="bottom">All students spend a minimum of 100 hours within their
-                communities, volunteering and serving </footer>
+              <footer class="blockquote-footer" id="bottom">
+                All students spend a minimum of 100 hours within their
+                communities, volunteering and serving{" "}
+              </footer>
             </div>
           </div>
         </div>
@@ -48,7 +51,9 @@ class ourStory extends Component {
 
         <div className="container">
           <div className="row stats">
-            <div className="col-4 cande" id="students">CSMB Students</div>
+            <div className="col-4 cande" id="students">
+              CSMB Students
+            </div>
             <div className="col-4 bigStats">
               <ul>
                 <li className="">Have served at 594 locations</li>
@@ -75,7 +80,12 @@ class ourStory extends Component {
           <div className="row ">
             <div className="col-7">
               {/* <img src={campBarn} alt="Filler" className="topPhoto" /> */}
-              <img src={homelessB} alt="Filler" className="topPhoto btmPhoto" id="pic" />
+              <img
+                src={homelessB}
+                alt="Filler"
+                className="topPhoto btmPhoto"
+                id="pic"
+              />
               {/* <img src={ria} alt="Filler" className="topPhoto" /> */}
             </div>
             <div className="col-5 pollRes">
@@ -111,7 +121,12 @@ class ourStory extends Component {
               </div>
             </div>
             <div className="col-7">
-              <img src={campBarn} alt="Filler" className="topPhoto btmPhoto" id="pic2"/>
+              <img
+                src={sludm}
+                alt="Filler"
+                className="topPhoto btmPhoto"
+                id="pic2"
+              />
               {/* <img src={ria} alt="Filler" className="topPhoto" /> */}
             </div>
           </div>
