@@ -31,7 +31,7 @@
   .maps {
     grid-area: maps;
     padding: 1em;
-    background-color: green;
+    /* background-color: green; */
   }
   .incent {
     background-color: white;
