@@ -5,8 +5,8 @@ import MissionVision from "../components/MissionVision";
 import "./home.css";
 
 //Firebase
-import 'firebase/firestore';
-import fire from '../../config/firebaseConfig.config';
+import "firebase/firestore";
+import fire from "../../config/firebaseConfig.config";
 var firestore = fire.firestore();
 
 //email stuff the things aren't in the right place currently
@@ -37,9 +37,8 @@ var firestore = fire.firestore();
 // });
 
 class Home extends Component {
-
-constructor(props) {
-  super(props);
+  constructor(props) {
+    super(props);
     this.state = {
       user: null,
       fireuser: null
@@ -51,45 +50,48 @@ constructor(props) {
 
     //Local Auth
     const ensureAuth = function() {
-      return new Promise((resolve,reject) =>  {
-          const user = fire.auth().currentUser;
-          if (user != null) {
-            resolve(user);
-          }
+      return new Promise((resolve, reject) => {
+        const user = fire.auth().currentUser;
+        if (user != null) {
+          resolve(user);
+        }
       }).then(function(variab) {
         console.log(variab);
-        that.setState({user: variab})
+        that.setState({ user: variab });
       });
-    }
+    };
 
     //Server Auth
     const ensureFireAuth = function() {
-      return new Promise((resolve,reject) =>  {
-          firestore.collection('users').doc(fire.auth().currentUser.uid).get() 
+      return new Promise((resolve, reject) => {
+        firestore
+          .collection("users")
+          .doc(fire.auth().currentUser.uid)
+          .get()
           .then(function(userRef) {
             if (userRef.exists) {
               resolve(userRef.data());
-          }
-        })
+            }
+          });
       }).then(function(variab) {
-        that.setState({fireuser: variab})
+        that.setState({ fireuser: variab });
       });
-    }
+    };
 
     //Call Functions w/ TimeOut...
     setTimeout(ensureAuth, 500);
     setTimeout(ensureFireAuth, 500);
 
     //Debugging
-    console.log(this.state.user, this.state.fireuser)
+    console.log(this.state.user, this.state.fireuser);
   }
-  
+
   render() {
     if (!this.state.user || !this.state.fireuser) {
-        return <div>Loading</div>
+      return <div>Loading</div>;
     }
     const progressStyle = {
-      width: this.state.progressComplete + "%",
+      width: this.state.fireuser.hours.totalHours + "%",
       color: "white",
       backgroundColor: "#030D61"
     };
@@ -103,7 +105,11 @@ constructor(props) {
             <div className="col-sm-7">
               <div className="card">
                 <div className="card-body" style={{ height: "245px" }}>
-                  <LogHourForm userName={this.state.user.displayName} currentLogAmmount={this.state.fireuser.hours.totalLogged} currentHourAmmount={this.state.fireuser.hours.totalHours}/>
+                  <LogHourForm
+                    userName={this.state.user.displayName}
+                    currentLogAmmount={this.state.fireuser.hours.totalLogged}
+                    currentHourAmmount={this.state.fireuser.hours.totalHours}
+                  />
                 </div>
               </div>
               <br></br>
@@ -125,7 +131,7 @@ constructor(props) {
               <div className="card">
                 <div className="card-body">
                   <img
-                    // src={corwin} 
+                    // src={corwin}
                     src={this.state.fireuser.info.userPicture}
                     alt="User Profile"
                     className="img-fluid img-profile"
@@ -136,7 +142,9 @@ constructor(props) {
                       className="progress-bar progress-bar-striped progress-bar-animated"
                       role="progressbar"
                       style={progressStyle}
-                      aria-valuenow={Number(this.state.fireuser.hours.totalHours)}
+                      aria-valuenow={parseInt(
+                        this.state.fireuser.hours.totalHours
+                      )}
                       aria-valuemin="0"
                       aria-valuemax="100"
                     >
