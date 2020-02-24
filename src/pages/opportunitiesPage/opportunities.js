@@ -145,7 +145,7 @@ class Opportunities extends Component {
           {/* <Button onClick={this.showOnlyAnimals}>Animal</Button> */}
           {/* <Button onClick={this.showOnlyArts}>Arts</Button> */}
           <div id="container">
-            <Button onClick={this.showAll}>{this.state.filterType}</Button>
+            <Button id = "filt" onClick={this.showAll}>{this.state.filterType}</Button>
             <button
               type="button"
               class="ui button icon only"
@@ -239,11 +239,12 @@ class Opportunities extends Component {
                 <>
                   <Card>
                     <Card.Content className="test">
-                      <Card.Header>{doc.OrgName}</Card.Header>
-                      <Card.Meta>{doc.Address}</Card.Meta>
+                      <Card.Header >{doc.OrgName}</Card.Header>
+                      <Card.Meta id = "chead">{doc.Address}</Card.Meta>
                       <p class="DM">{doc.DescriptionMission}</p>
                       <a
                         class="ui button icon only"
+                        id = "ibutton"
                         href={doc.DonationLink}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -253,6 +254,8 @@ class Opportunities extends Component {
                       {/* &nbsp; */}
                       <a
                         class="ui button icon only"
+                        id = "ibutton"
+
                         href={doc.VolunteerForm}
                         arget="_blank"
                         rel="noopener noreferrer"
@@ -262,6 +265,8 @@ class Opportunities extends Component {
                       {/* <br /> */}
                       <a
                         class="ui button icon only"
+                        id = "ibutton"
+
                         href={doc.Homepage}
                         target="_blank"
                         rel="noopener noreferrer"
