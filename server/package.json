@@ -1,0 +1,28 @@
+{
+  "name": "wwtvolunteerapp",
+  "version": "0.1.0",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_ENV=production forever server.js",
+    "deploy": "now && now alias",
+    "dev": "nodemon server"
+  },
+  "dependencies": {
+    "@google-cloud/firestore": "^3.5.1",
+    "body-parser": "^1.19.0",
+    "connect": "^3.7.0",
+    "cors": "^2.8.5",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "firebase-admin": "^8.9.2",
+    "forever": "^2.0.0",
+    "mongoose": "^5.9.2",
+    "nodemailer": "^5.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9",
+    "now": "^13.0.0"
+  }
+}

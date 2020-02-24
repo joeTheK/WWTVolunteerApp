@@ -1,8 +1,57 @@
 import React, { Component } from "react";
+import { notify } from 'react-notify-toast'
 import "./home.css";
-// import '../index.ts';
-import updateHours from '../../index.ts'
-import fire from "../../config/firebaseConfig.config";
+
+//Firebase
+import 'firebase/firestore';
+import fire from '../../config/firebaseConfig.config';
+var firestore = fire.firestore();
+
+const updateHours = function(user, data, username, currentLogAmmount, currentHourAmmount) {
+  firestore.collection('users').doc(user).set({ 
+    hours: {
+      hourslogged: {
+        [currentLogAmmount + 1]: {
+          confirmed: false,
+          siteHours: Number(data.hours),
+          siteName: data.siteName,
+          siteAddress: data.siteAddress,
+          siteCoordinatorEmail: data.coordEmail
+        } 
+      },
+      totalHours: Number((Number(currentHourAmmount) + Number(data.hours))),
+      totalLogged: (currentLogAmmount + 1)
+    }
+  }, { merge: true })
+
+  fetch(`http://localhost:8080/email`, {
+    method: 'POST',
+    headers: {
+      aCcePt: 'application/json', 
+      'content-type': 'application/json'
+    },
+    body: JSON.stringify({ 
+      "data": {
+        "uid": user,
+        "displayName": username
+      },
+      "logNum": (currentLogAmmount) + 1
+    })
+  })
+  .then(res => res.json())  
+  .then(data => {
+    
+    // Everything has come back successfully, time to update the state to 
+    // reenable the button and stop the <Spinner>. Also, show a toast with a 
+    // message from the server to give the user feedback and reset the form 
+    // so the user can start over if she chooses.
+    notify.show(data.msg)
+    .then(function() {
+      window.location.reload();
+    })
+  })
+    .catch(err => console.log(err))
+}
 
 class LogHourForm extends Component {
   constructor(props) {
@@ -15,20 +64,9 @@ class LogHourForm extends Component {
     };
   }
   mySubmitHandler = event => {
-    const user = fire.auth().currentUser();
+    
     event.preventDefault();
-    alert(
-      "You are submitting with " +
-        this.state.hours +
-        " hours " +
-        this.state.siteName +
-        " siteName " +
-        this.state.siteAddress +
-        " siteAddress " +
-        this.state.coordEmail +
-        " coordEmail"
-    );
-    updateHours(user, this.state.hours);
+    updateHours(fire.auth().currentUser.uid, this.state, this.props.userName, this.props.currentLogAmmount, this.props.currentHourAmmount);
     //export this.state.totalHours
   };
   hourChangeHandler = event => {

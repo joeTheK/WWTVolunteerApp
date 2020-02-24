@@ -10,15 +10,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 //
 import Tabletop from "tabletop";
 //Dynamically pulls from google sheets: requires npm install tabletop
-          
+
 class Opportunities extends Component {
   state = {
-    open: false,
+    open: false
   };
   handleButtonClick = () => {
     this.setState(state => {
       return {
-        open: !state.open,
+        open: !state.open
       };
     });
   };
@@ -49,7 +49,6 @@ class Opportunities extends Component {
   //^^ Data Table Stuff
 
   render() {
-    
     //Mess with Table CSS here:
     // var tableStyle = {
     //   border: "1px solid black",
@@ -65,129 +64,174 @@ class Opportunities extends Component {
     const { data } = this.state;
     //table stuff^^
     // if (this.state.op === "alt") {
-      console.log(data);
-      var dataToShow;
-      if (this.state.filterType === "All") {
-        dataToShow = data;
-      }
-      // if (this.state.filterType === "onlyvalid") {
-      //   dataToShow = this.filterList(data);
-      // }
-      if (this.state.filterType === "Women") {
-        dataToShow = this.filterListForWomen(this.filterList(data));
-      }
-      if (this.state.filterType === "Arts") {
-        dataToShow = this.filterListForArts(data);
-      }
-      if (this.state.filterType === "Animals") {
-        dataToShow = this.filterListForAnimals(this.filterList(data));
-      }
-      if (this.state.filterType === "Children") {
-        dataToShow = this.filterListForChildren(this.filterList(data));
-      }
-      if (this.state.filterType === "Legal") {
-        dataToShow = this.filterListForLegal(this.filterList(data));
-      }
-      if (this.state.filterType === "Environmental") {
-        dataToShow = this.filterListForEnvironmental(this.filterList(data));
-      }
-      if (this.state.filterType === "Racial/Ethnic") {
-        dataToShow = this.filterListForRac(this.filterList(data));
-      }
-      if (this.state.filterType === "Health") {
-        dataToShow = this.filterListForHealth(this.filterList(data));
-      }
-      if (this.state.filterType === "Disabilities") {
-        dataToShow = this.filterListForDisab(this.filterList(data));
-      }
-      if (this.state.filterType === "Hunger") {
-        dataToShow = this.filterListForHunger(this.filterList(data));
-      }
-      if (this.state.filterType === "Homelessness") {
-        dataToShow = this.filterListForHome(this.filterList(data));
-      }
-      if (this.state.filterType === "Community") {
-        dataToShow = this.filterListForCommunity(this.filterList(data));
-      }
-      if (this.state.filterType === "Music") {
-        dataToShow = this.filterListForMusic(this.filterList(data));
-      }
-      if (this.state.filterType === "Faith") {
-        dataToShow = this.filterListForFaith(this.filterList(data));
-      }
-      if (this.state.filterType === "Veterans") {
-        dataToShow = this.filterListForVeterans(this.filterList(data));
-      }
-      if (this.state.filterType === "Education") {
-        dataToShow = this.filterListForEducation(this.filterList(data));
-      }
-      if (this.state.filterType === "LGBTQIA") {
-        dataToShow = this.filterListForLGBTQIA(this.filterList(data));
-      }
-      if (this.state.filterType === "Youth") {
-        dataToShow = this.filterListForYouth(this.filterList(data));
-      }
-      if (this.state.filterType === "Seniors") {
-        dataToShow = this.filterListForSeniors(this.filterList(data));
-      }
-      if (this.state.filterType === "Fitness") {
-        dataToShow = this.filterListForFitness(this.filterList(data));
-      }
-      if (this.state.filterType === "Sports") {
-        dataToShow = this.filterListForSports(this.filterList(data));
-      }
-      return (
-        
-        <div className="OpportunitiesBody">
-          <Navbar />
-          <div id = "xob">
-
+    console.log(data);
+    var dataToShow;
+    if (this.state.filterType === "All") {
+      dataToShow = data;
+    }
+    // if (this.state.filterType === "onlyvalid") {
+    //   dataToShow = this.filterList(data);
+    // }
+    if (this.state.filterType === "Women") {
+      dataToShow = this.filterListForWomen(this.filterList(data));
+    }
+    if (this.state.filterType === "Arts") {
+      dataToShow = this.filterListForArts(data);
+    }
+    if (this.state.filterType === "Animals") {
+      dataToShow = this.filterListForAnimals(this.filterList(data));
+    }
+    if (this.state.filterType === "Children") {
+      dataToShow = this.filterListForChildren(this.filterList(data));
+    }
+    if (this.state.filterType === "Legal") {
+      dataToShow = this.filterListForLegal(this.filterList(data));
+    }
+    if (this.state.filterType === "Environmental") {
+      dataToShow = this.filterListForEnvironmental(this.filterList(data));
+    }
+    if (this.state.filterType === "Racial/Ethnic") {
+      dataToShow = this.filterListForRac(this.filterList(data));
+    }
+    if (this.state.filterType === "Health") {
+      dataToShow = this.filterListForHealth(this.filterList(data));
+    }
+    if (this.state.filterType === "Disabilities") {
+      dataToShow = this.filterListForDisab(this.filterList(data));
+    }
+    if (this.state.filterType === "Hunger") {
+      dataToShow = this.filterListForHunger(this.filterList(data));
+    }
+    if (this.state.filterType === "Homelessness") {
+      dataToShow = this.filterListForHome(this.filterList(data));
+    }
+    if (this.state.filterType === "Community") {
+      dataToShow = this.filterListForCommunity(this.filterList(data));
+    }
+    if (this.state.filterType === "Music") {
+      dataToShow = this.filterListForMusic(this.filterList(data));
+    }
+    if (this.state.filterType === "Faith") {
+      dataToShow = this.filterListForFaith(this.filterList(data));
+    }
+    if (this.state.filterType === "Veterans") {
+      dataToShow = this.filterListForVeterans(this.filterList(data));
+    }
+    if (this.state.filterType === "Education") {
+      dataToShow = this.filterListForEducation(this.filterList(data));
+    }
+    if (this.state.filterType === "LGBTQIA") {
+      dataToShow = this.filterListForLGBTQIA(this.filterList(data));
+    }
+    if (this.state.filterType === "Youth") {
+      dataToShow = this.filterListForYouth(this.filterList(data));
+    }
+    if (this.state.filterType === "Seniors") {
+      dataToShow = this.filterListForSeniors(this.filterList(data));
+    }
+    if (this.state.filterType === "Fitness") {
+      dataToShow = this.filterListForFitness(this.filterList(data));
+    }
+    if (this.state.filterType === "Sports") {
+      dataToShow = this.filterListForSports(this.filterList(data));
+    }
+    return (
+      <div className="OpportunitiesBody">
+        <Navbar />
+        <div id="xob">
           {/* <Button onClick={this.showAll}>ALL</Button>{" "} */}
           {/* <Button onClick={this.showOnlyValid}>Only Valid</Button> */}
           {/* <Button onClick={this.showOnlyWomen}>Women</Button> */}
           {/* <Button onClick={this.showOnlyAnimals}>Animal</Button> */}
           {/* <Button onClick={this.showOnlyArts}>Arts</Button> */}
           <div id="container">
-      <Button onClick={this.showAll}>{this.state.filterType}</Button>
-  <button type="button" class="ui button icon only" onClick={this.handleButtonClick}>
-  <FontAwesomeIcon icon={faFilter} />
-
-
-  </button>
-  {this.state.open && (
-    <div class="dropdown">
-      <ul className = "list">
-      <li><Button onClick={this.showOnlyRac}>Racial/Ethnic</Button></li>
-        <li><Button onClick={this.showOnlyWomen}>Women</Button></li>
-        <li><Button onClick={this.showOnlyAnimals}>Animal</Button></li>
-        <li><Button onClick={this.showOnlyArts}>Arts</Button></li>
-        <li><Button onClick={this.showOnlyChildren}>Children</Button></li>
-        <li><Button onClick={this.showOnlyEnvironmental}>Environmental</Button></li>
-        <li><Button onClick={this.showOnlyLegal}>Legal</Button></li>
-        <li><Button onClick={this.showAll}>ALL</Button>{" "}</li>
-
-        </ul>
-        <ul className = "list">
-        <li><Button onClick={this.showOnlyHealth}>Health</Button></li>
-        <li><Button onClick={this.showOnlyDisab}>Disabilities</Button></li>
-        <li><Button onClick={this.showOnlyHunger}>Hunger</Button></li>
-        <li><Button onClick={this.showOnlyHome}>Homelessness</Button></li>
-        <li><Button onClick={this.showOnlyCommunity}>Community</Button></li>
-        <li><Button onClick={this.showOnlyMusic}>Music</Button></li>
-        <li><Button onClick={this.showOnlyFaith}>Faith</Button></li>
-        </ul>
-        <ul className = "list2">
-        <li><Button onClick={this.showOnlyVeterans}>Veterans</Button></li>
-        <li><Button onClick={this.showOnlyEducation}>Education</Button></li>
-        <li><Button onClick={this.showOnlyLGBTQIA}>LGBTQIA</Button></li>
-        <li><Button onClick={this.showOnlyYouth}>Youth</Button></li>
-        <li><Button onClick={this.showOnlySeniors}>Seniors</Button></li>
-        <li><Button onClick={this.showOnlyFitness}>Fitness</Button></li>
-        <li><Button onClick={this.showOnlySports}>Sports</Button></li>
-        </ul>
-    </div>
-  )}
-</div>
+            <Button onClick={this.showAll}>{this.state.filterType}</Button>
+            <button
+              type="button"
+              class="ui button icon only"
+              onClick={this.handleButtonClick}
+            >
+              <FontAwesomeIcon icon={faFilter} />
+            </button>
+            {this.state.open && (
+              <div class="dropdown">
+                <ul className="list">
+                  <li>
+                    <Button onClick={this.showOnlyRac}>Racial/Ethnic</Button>
+                  </li>
+                  <li>
+                    <Button onClick={this.showOnlyWomen}>Women</Button>
+                  </li>
+                  <li>
+                    <Button onClick={this.showOnlyAnimals}>Animal</Button>
+                  </li>
+                  <li>
+                    <Button onClick={this.showOnlyArts}>Arts</Button>
+                  </li>
+                  <li>
+                    <Button onClick={this.showOnlyChildren}>Children</Button>
+                  </li>
+                  <li>
+                    <Button onClick={this.showOnlyEnvironmental}>
+                      Environmental
+                    </Button>
+                  </li>
+                  <li>
+                    <Button onClick={this.showOnlyLegal}>Legal</Button>
+                  </li>
+                  <li>
+                    <Button onClick={this.showAll}>ALL</Button>{" "}
+                  </li>
+                </ul>
+                <ul className="list">
+                  <li>
+                    <Button onClick={this.showOnlyHealth}>Health</Button>
+                  </li>
+                  <li>
+                    <Button onClick={this.showOnlyDisab}>Disabilities</Button>
+                  </li>
+                  <li>
+                    <Button onClick={this.showOnlyHunger}>Hunger</Button>
+                  </li>
+                  <li>
+                    <Button onClick={this.showOnlyHome}>Homelessness</Button>
+                  </li>
+                  <li>
+                    <Button onClick={this.showOnlyCommunity}>Community</Button>
+                  </li>
+                  <li>
+                    <Button onClick={this.showOnlyMusic}>Music</Button>
+                  </li>
+                  <li>
+                    <Button onClick={this.showOnlyFaith}>Faith</Button>
+                  </li>
+                </ul>
+                <ul className="list2">
+                  <li>
+                    <Button onClick={this.showOnlyVeterans}>Veterans</Button>
+                  </li>
+                  <li>
+                    <Button onClick={this.showOnlyEducation}>Education</Button>
+                  </li>
+                  <li>
+                    <Button onClick={this.showOnlyLGBTQIA}>LGBTQIA</Button>
+                  </li>
+                  <li>
+                    <Button onClick={this.showOnlyYouth}>Youth</Button>
+                  </li>
+                  <li>
+                    <Button onClick={this.showOnlySeniors}>Seniors</Button>
+                  </li>
+                  <li>
+                    <Button onClick={this.showOnlyFitness}>Fitness</Button>
+                  </li>
+                  <li>
+                    <Button onClick={this.showOnlySports}>Sports</Button>
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
 
           <div className={"op_contain"}>
             {dataToShow.map(doc => {
@@ -197,12 +241,33 @@ class Opportunities extends Component {
                     <Card.Content className="test">
                       <Card.Header>{doc.OrgName}</Card.Header>
                       <Card.Meta>{doc.Address}</Card.Meta>
-                      <p class = "DM">{doc.DescriptionMission}</p>
-                      <a class="ui button icon only" href={doc.DonationLink} target="_blank" rel="noopener noreferrer">Donate</a>
+                      <p class="DM">{doc.DescriptionMission}</p>
+                      <a
+                        class="ui button icon only"
+                        href={doc.DonationLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Donate
+                      </a>
                       {/* &nbsp; */}
-                      <a class="ui button icon only" href={doc.VolunteerForm} arget="_blank" rel="noopener noreferrer">Apply</a>
+                      <a
+                        class="ui button icon only"
+                        href={doc.VolunteerForm}
+                        arget="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Apply
+                      </a>
                       {/* <br /> */}
-                      <a class="ui button icon only" href={doc.Homepage} target="_blank" rel="noopener noreferrer">Website</a>
+                      <a
+                        class="ui button icon only"
+                        href={doc.Homepage}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Website
+                      </a>
                     </Card.Content>
                   </Card>
                 </>
@@ -210,8 +275,8 @@ class Opportunities extends Component {
             })}
           </div>
         </div>
-        </div>
-      );
+      </div>
+    );
     // }
 
     // return (
@@ -245,7 +310,7 @@ class Opportunities extends Component {
     var temp = [];
     docs.forEach(doc => {
       // if (validate(doc)) {
-        temp.push(doc);
+      temp.push(doc);
       // }
     });
     return temp;
@@ -367,7 +432,7 @@ class Opportunities extends Component {
     });
     return temp;
   }
-    filterListForFaith(docs) {
+  filterListForFaith(docs) {
     var temp = [];
     docs.forEach(doc => {
       if (doc["Categories"].match("faith")) {

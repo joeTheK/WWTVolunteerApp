@@ -27,7 +27,7 @@
     padding-left: 5%;
     padding-top: 5%;
     margin: auto;
-   }
+  }
   .maps {
     grid-area: maps;
     padding: 1em;
@@ -39,19 +39,19 @@
     grid-area: incent;
     transition: 0.3s;
     border-radius: 5px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: "Quicksand", sans-serif;
   }
   .test {
     color: red;
   }
 }
-.trophy{
-  height:2%;
-  width:2%;
+.trophy {
+  height: 2%;
+  width: 2%;
 }
-.schenk{
-  height:5%;
-  width:5%;
+.schenk {
+  height: 5%;
+  width: 5%;
 }
 @media only screen and (max-width: 500px) {
   .boi {
@@ -72,7 +72,7 @@
   .incent {
     background-color: white;
     padding: 1em;
-    font-family: 'Quicksand', sans-serif;
+    font-family: "Quicksand", sans-serif;
   }
   .test {
     color: red;
