@@ -9,7 +9,9 @@ import L from "leaflet";
 class Maps extends Component {
   render() {
     return (
+    
       <React.Fragment>
+        <Navbar />
         <LeafletMap
           center={[38.65, -90.25]}
           zoom={11}
