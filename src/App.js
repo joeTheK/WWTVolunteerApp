@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import "./App.css";
-import fire from './config/firebaseConfig.config';
 
 import {
   BrowserRouter as Router,
@@ -16,8 +15,11 @@ import Home from "./pages/homePage/home";
 import Community from "./pages/communityPage/community";
 import Opportunities from "./pages/opportunitiesPage/opportunities";
 import ourStory from "./pages/ourStoryPage/ourStoryPage";
-// import Api from "./server/api/cities.js"
 
+//FireBase
+import 'firebase/firestore';
+import fire from './config/firebaseConfig.config';
+var firestore = fire.firestore();
 
 class App extends Component {
   constructor() {
@@ -37,6 +39,41 @@ class App extends Component {
       if (user) {
         this.setState({ user });
         localStorage.setItem('user', user.uid);
+
+        //Checks to see if user is in DB.
+        firestore.collection('users').doc(user.uid).get()
+        .then(function(userRef) {
+          if (userRef.exists) {
+              console.log(userRef.data().info.firstName)
+          } else {
+            var name = user.displayName;
+            var namesplit = name.split(" ")
+            firestore.collection('users').doc(user.uid).set({
+              //Sets User Profile Info
+              info: {
+                firstName: namesplit[0],
+                lastName: namesplit[1],
+                userPicture: user.photoURL
+              },
+              
+              //Sets User Data Info
+              hours: {
+                totalHours: 20,
+                totalLogged: 2,
+                hourslogged: {
+                  "1" : {
+                    confirmed: true,
+                    siteHours: 20,
+                    siteName: "CSMB Student Council",
+                    siteAddress: "1547 S Theresa Ave, St. Louis, MO 63104",
+                    siteCoordinatorEmail: "stuco@csmb-stl.org"
+                  },
+                }
+              }
+            });
+          }
+        });
+
       } else {
         this.setState({ user: null });
         localStorage.removeItem('user');

@@ -3,7 +3,6 @@ import Navbar from "../components/Navbar";
 import LogHourForm from "./logHourForm";
 import MissionVision from "../components/MissionVision";
 import "./home.css";
-// import corwin from "./corwin.jpg";
 
 //Firebase
 import fire from '../../config/firebaseConfig.config';
@@ -15,7 +14,7 @@ constructor(props) {
   super(props);
     this.state = {
       user: null,
-      progressComplete: fire.auth().currentUser.hours,
+      progressComplete: 87
     };
   }
 
@@ -92,7 +91,7 @@ constructor(props) {
                       aria-valuemin="0"
                       aria-valuemax="100"
                     >
-                      {this.state.progressComplete}%
+                      {/* {this.state.progressComplete}% */}
                     </div>
                   </div>
                   <p>
