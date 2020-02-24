@@ -5,8 +5,9 @@ import MissionVision from "../components/MissionVision";
 import "./home.css";
 
 //Firebase
+import 'firebase/firestore';
 import fire from '../../config/firebaseConfig.config';
-// import { response } from "express";
+var firestore = fire.firestore();
 
 class Home extends Component {
 
@@ -14,12 +15,14 @@ constructor(props) {
   super(props);
     this.state = {
       user: null,
-      progressComplete: 87
+      fireuser: null
     };
   }
 
   componentDidMount() {
     var that = this;
+
+    //Local Auth
     const ensureAuth = function() {
       return new Promise((resolve,reject) =>  {
           const user = fire.auth().currentUser;
@@ -31,12 +34,31 @@ constructor(props) {
         that.setState({user: variab})
       });
     }
-    
-    setTimeout(ensureAuth, 500)
+
+    //Server Auth
+    const ensureFireAuth = function() {
+      return new Promise((resolve,reject) =>  {
+          firestore.collection('users').doc(fire.auth().currentUser.uid).get() 
+          .then(function(userRef) {
+            if (userRef.exists) {
+              resolve(userRef.data());
+          }
+        })
+      }).then(function(variab) {
+        that.setState({fireuser: variab})
+      });
+    }
+
+    //Call Functions w/ TimeOut...
+    setTimeout(ensureAuth, 500);
+    setTimeout(ensureFireAuth, 500);
+
+    //Debugging
+    console.log(this.state.user, this.state.fireuser)
   }
   
   render() {
-    if (!this.state.user) {
+    if (!this.state.user || !this.state.fireuser) {
         return <div>Loading</div>
     }
     const progressStyle = {
@@ -54,7 +76,7 @@ constructor(props) {
             <div className="col-sm-7">
               <div className="card">
                 <div className="card-body" style={{ height: "245px" }}>
-                  <LogHourForm userName={this.state.user.displayName} />
+                  <LogHourForm userName={this.state.user.displayName} currentLogAmmount={this.state.fireuser.hours.totalLogged} currentHourAmmount={this.state.fireuser.hours.totalHours}/>
                 </div>
               </div>
               <br></br>
@@ -77,7 +99,7 @@ constructor(props) {
                 <div className="card-body">
                   <img
                     // src={corwin} 
-                    src={this.state.user.photoURL}
+                    src={this.state.fireuser.info.userPicture}
                     alt="User Profile"
                     className="img-fluid img-profile"
                     style={{ marginBottom: "5px", height: "250px" }}
@@ -87,17 +109,17 @@ constructor(props) {
                       className="progress-bar progress-bar-striped progress-bar-animated"
                       role="progressbar"
                       style={progressStyle}
-                      aria-valuenow={this.state.progressComplete}
+                      aria-valuenow={Number(this.state.fireuser.hours.totalHours)}
                       aria-valuemin="0"
                       aria-valuemax="100"
                     >
-                      {/* {this.state.progressComplete}% */}
+                      {/* {this.state.fireuser.hours.totalHours}% */}
                     </div>
                   </div>
                   <p>
-                    {this.state.user.firstName} has{" "}
+                    {this.state.fireuser.info.firstName} has{" "}
                     <span style={{ color: "#030D61", fontWeight: "bold" }}>
-                      {this.state.progressComplete}/100
+                      {this.state.fireuser.hours.totalHours}/100
                     </span>{" "}
                     hours completed
                   </p>

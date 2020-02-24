@@ -4,13 +4,12 @@ const cors = require('cors')
 
 const app = express()
 const emailController = require('./email/email.controller')
-const { CLIENT_ORIGIN } = require('./config')
 
 app.set('port', 8080);
 
 // Only allow requests from our client
 app.use(cors({
-  origin: CLIENT_ORIGIN
+  origin: `http://localhost:3000`
 }))
 
 // Allow the app to accept JSON on req.body
