@@ -31,7 +31,12 @@
   .maps {
     grid-area: maps;
     padding: 1em;
+            
     /* background-color: green; */
+  }
+  .leaflet-container{
+    height: 510px !important;
+    width: 1000px !important;
   }
   .incent {
     background-color: white;
@@ -64,9 +69,10 @@
   }
 
   .maps {
-    margin-top: 5px;
-    padding: 1em;
+    /* margin-top: 5px;
+    padding: 1em; */
     height: 70vh;
+    width:auto;
     background-color: green;
   }
   .incent {

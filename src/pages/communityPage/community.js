@@ -37,7 +37,7 @@ class Community extends Component {
                 sourceType="profile"
                 screenName="Owl_Hours"
                 data-chrome="nofooter noheader"
-                options={{ height: 640 }}
+                options={{ height: 640, width: 500 }}
               />
             </div>
             <div className="maps">
