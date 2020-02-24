@@ -140,12 +140,14 @@ class Opportunities extends Component {
         
         <div className="OpportunitiesBody">
           <Navbar />
+          <div id = "xob">
+
           {/* <Button onClick={this.showAll}>ALL</Button>{" "} */}
           {/* <Button onClick={this.showOnlyValid}>Only Valid</Button> */}
           {/* <Button onClick={this.showOnlyWomen}>Women</Button> */}
           {/* <Button onClick={this.showOnlyAnimals}>Animal</Button> */}
           {/* <Button onClick={this.showOnlyArts}>Arts</Button> */}
-          <div className="container">
+          <div id="container">
       <Button onClick={this.showAll}>{this.state.filterType}</Button>
   <button type="button" class="ui button icon only" onClick={this.handleButtonClick}>
   <FontAwesomeIcon icon={faFilter} />
@@ -195,36 +197,19 @@ class Opportunities extends Component {
                     <Card.Content className="test">
                       <Card.Header>{doc.OrgName}</Card.Header>
                       <Card.Meta>{doc.Address}</Card.Meta>
-                      <a
-                        href={doc.DonationLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Donate Now
-                      </a>
-                      &nbsp;
-                      <a
-                        href={doc.VolunteerForm}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Apply now
-                      </a>
-                      <br />
-                      <a
-                        href={doc.Homepage}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Contact Us
-                      </a>
-                      <p>{doc.DescriptionMission}</p>
+                      <p class = "DM">{doc.DescriptionMission}</p>
+                      <a class="ui button icon only" href={doc.DonationLink} target="_blank" rel="noopener noreferrer">Donate</a>
+                      {/* &nbsp; */}
+                      <a class="ui button icon only" href={doc.VolunteerForm} arget="_blank" rel="noopener noreferrer">Apply</a>
+                      {/* <br /> */}
+                      <a class="ui button icon only" href={doc.Homepage} target="_blank" rel="noopener noreferrer">Website</a>
                     </Card.Content>
                   </Card>
                 </>
               );
             })}
           </div>
+        </div>
         </div>
       );
     // }
