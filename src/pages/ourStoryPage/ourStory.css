@@ -98,6 +98,8 @@ ul {
 }
 .stat {
   font-size: 24px;
+  color: #0d47a1;
+  font-weight: bold;
 }
 .secondarySpacing {
   margin-top: 20%;
