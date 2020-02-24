@@ -1,14 +1,431 @@
 {
-    "type": "Feature",
-    "properties":{
-      "name": "APA Adoption Center",
-      "amenity": "Animals",
-      "geometry":
-      
-      
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "APA Adoption Center",
+        "amenity": "Animals",
+        "popupContent": "<center><img src='https://apamo.org/images/apa_logo.png' height='50px' /><br><b>APA Adoption Center</b> </br>314-645-4610</center>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-90.33493432, 38.62415328]
+      }
+    },
+
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "CARE STL",
+        "amenity": "Animals",
+        "popupContent": "<center><img src='img/care.png'height='50px' /><br><b>CARE STL</b> </br>314-696-2444</center>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-90.21750534, 38.63011255]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Duo Dogs",
+        "amenity": "Animals",
+        "popupContent": "<center><img src='img/duo.png'height='50px'</br><b></br>Duo Dogs</b> </br>314-696-2444</center>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-90.40424124, 38.69304642]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Five Acres Animal Shelter",
+        "amenity": "Animals",
+        "popupContent": "<center><b>Five Acres Animal Shelter</b> </br>636-949-9918</center>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-90.52716108, 38.75736214]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gateway Pet Guardians",
+        "amenity": "Animals",
+        "popupContent": "<center><b>Gateway Pet Guardians</b> </br>314-664-7398</center>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-90.27505052, 38.62400299]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Needy Paws Rescue STL",
+        "amenity": "Animals",
+        "popupContent": "<center><b>Needy Paws Rescue STL</b> </br>314-664-7398?</center>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-90.2969901, 38.519267]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Saint Louis Zoo",
+        "amenity": "Animals",
+        "popupContent": "<center><b>Saint Louis Zoo</b> </br>314-646-4633</center>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-90.29921326, 38.63512797]
+      }
+    },
+
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Stray Rescue of STL",
+        "amenity": "Animals",
+        "popupContent": "<center><b>Stray Rescue of STL</b> </br>314-771-6121</center>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-90.21331525, 38.63218389]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wild Bird Rehabilitation",
+        "amenity": "Animals",
+        "popupContent": "<center><b>Wild Bird Rehabilitation</b> </br>314-426-6400</center>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-90.36879884, 38.70804239]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wildlife Rescue Center",
+        "amenity": "Animals",
+        "popupContent": "<center><b>Wildlife Rescue Center</b> </br>314-394-1880</center>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-90.55053735, 38.55134896]
+      }
+    },
+
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Exceptional Equestrians of the Missouri Valley, Inc.",
+        "amenity": "Animals",
+        "popupContent": "<center><b>Exceptional Equestrians of the Missouri Valley, Inc.</b> </br>636-390-2141</center>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-91.03494833, 38.49041643]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ride On St. Louis",
+        "amenity": "Animals",
+        "popupContent": "<center><b>Ride On St. Louis</b> </br>636-464-3408</center>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-90.36281, 38.365585]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Laumeier Sculpture Park",
+        "amenity": "Arts",
+        "popupContent": "<center><b>Laumeier Sculpture Park</b> </br>314-615-5278</center>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-90.415269, 38.550465]
+      }
+    },
+
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "art STL",
+        "amenity": "Arts",
+        "popupContent": "<center><b>art STL</b> </br>314-241-4810</center>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-90.19849417, 38.62913239]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Arts As Healing Foundation",
+        "amenity": "Arts",
+        "popupContent": "<center><b>Arts As Healing Foundation</b> </br>314-640-5363</center>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-90.3708765, 38.669841]
+      }
+    },
+
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Chatillon-DeMenil Mansion",
+        "amenity": "Arts",
+        "popupContent": "<center><b>Chatillon-DeMenil Mansion</b> </br>314-771-5828</center>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-90.2162609, 38.59240814]
+      }
+    },
+
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cinema STL",
+        "amenity": "Arts",
+        "popupContent": "<center><b>Cinema STL</b> </br>314-289-4150</center>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-90.23116521, 38.63774466]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "COCA",
+        "amenity": "Arts",
+        "popupContent": "<center><b>COCA</b> </br>314-725-6555</center>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-90.3113507, 38.65492197]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Craft Alliance",
+        "amenity": "Arts",
+        "popupContent": "<center><b>Craft Alliance</b> </br>314-725-1177</center>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-90.30734137, 38.65617851]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "George Washington Carver House",
+        "amenity": "Arts",
+        "popupContent": "<center><b>George Washington Carver House</b> </br>314-768-0676</center>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-90.22131842, 38.64059144]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jazz Saint Louis",
+        "amenity": "Arts",
+        "popupContent": "<center><b>Jazz Saint Louis</b> </br>314.571.6000</center>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-90.23091598, 38.63887589]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Saint Louis Artists' Guild and Galleries",
+        "amenity": "Arts",
+        "popupContent": "<center><b>Saint Louis Artists' Guild and Galleries</b> </br>314-727-6266</center>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-90.3297735, 38.64969]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Saint Louis ArtWorks",
+        "amenity": "Arts",
+        "popupContent": "<center><b>Saint Louis ArtWorks</b> </br>314-899-9734</center>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-90.29273424, 38.65485448]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Saint Louis Classical Guitar Society",
+        "amenity": "Arts",
+        "popupContent": "<center><b>Saint Louis Classical Guitar Society</b> </br>314-567-5566</center>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-90.23116521, 38.63774466]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Saint Louis Fashion Fund",
+        "amenity": "Arts",
+        "popupContent": "<center><b>Saint Louis Fashion Fund</b> </br>314-400-9300</center>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-90.20142, 38.633085]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Saint Louis Science Center",
+        "amenity": "Arts",
+        "popupContent": "<center><b>Saint Louis Science Center</b> </br>314-289-4400</center>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-90.27046293, 38.62927962]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Shakespeare Festival of STL",
+        "amenity": "Arts",
+        "popupContent": "<center><b>Shakespeare Festival of STLr</b> </br>314-531-9800</center>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-90.28374864, 38.61477082]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Saint Louis Wind Symphony",
+        "amenity": "Arts",
+        "popupContent": "<center><b>Saint Louis Wind Symphony</b> </br>info@stlwindsym.org</center>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-90.3281095, 38.6462405]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Touhill Performing Arts Center",
+        "amenity": "Arts",
+        "popupContent": "<center><b>Touhill Performing Arts Center</b> </br>314-516-4949</center>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-90.3052215, 38.699874]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Circus Harmony",
+        "amenity": "Arts",
+        "popupContent": "<center><b>Circus Harmony</b> </br>314-436-7676</center>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-90.28078874, 38.79374099]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Boys Hope Girls Hope",
+        "amenity": "Children",
+        "popupContent": "<center><b>Boys Hope Girls Hope</b> </br>314-776-9406</center>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-90.33298259, 38.62534498]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Boys and Girls Club",
+        "amenity": "Children",
+        "popupContent": "<center><b>Boys and Girls Club</b> </br>314-335-8000</center>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-90.220266, 38.657925]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Crisis Nursery STL",
+        "amenity": "Children",
+        "popupContent": "<center><b>Crisis Nursery STL</b> </br>314-292-5770</center>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-90.43045816, 38.70173539]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Junior Achievement of Greater STL",
+        "amenity": "Children",
+        "popupContent": "<center><b>Junior Achievement of Greater STL</b> </br>636-728-0707</center>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-90.60207927, 38.67195415]
+      }
+    },
+
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Make A Wish Foundation",
+        "amenity": "Children",
+        "popupContent": "<center><b>Make A Wish Foundation</b> </br>314-205-9474</center>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-90.4699665, 38.59641]
+      }
     }
-    
-    
-    
-    
-   }
+  ]
+}
