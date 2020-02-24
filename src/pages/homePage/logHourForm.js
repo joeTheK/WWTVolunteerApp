@@ -1,57 +1,67 @@
 import React, { Component } from "react";
-import { notify } from 'react-notify-toast'
+import { notify } from "react-notify-toast";
 import "./home.css";
 
 //Firebase
-import 'firebase/firestore';
-import fire from '../../config/firebaseConfig.config';
+import "firebase/firestore";
+import fire from "../../config/firebaseConfig.config";
 var firestore = fire.firestore();
 
-const updateHours = function(user, data, username, currentLogAmmount, currentHourAmmount) {
-  firestore.collection('users').doc(user).set({ 
-    hours: {
-      hourslogged: {
-        [currentLogAmmount + 1]: {
-          confirmed: false,
-          siteHours: Number(data.hours),
-          siteName: data.siteName,
-          siteAddress: data.siteAddress,
-          siteCoordinatorEmail: data.coordEmail
-        } 
+const updateHours = function(
+  user,
+  data,
+  username,
+  currentLogAmmount,
+  currentHourAmmount
+) {
+  firestore
+    .collection("users")
+    .doc(user)
+    .set(
+      {
+        hours: {
+          hourslogged: {
+            [currentLogAmmount + 1]: {
+              confirmed: false,
+              siteHours: Number(data.hours),
+              siteName: data.siteName,
+              siteAddress: data.siteAddress,
+              siteCoordinatorEmail: data.coordEmail
+            }
+          },
+          totalHours: Number(Number(currentHourAmmount) + Number(data.hours)),
+          totalLogged: currentLogAmmount + 1
+        }
       },
-      totalHours: Number((Number(currentHourAmmount) + Number(data.hours))),
-      totalLogged: (currentLogAmmount + 1)
-    }
-  }, { merge: true })
+      { merge: true }
+    );
 
   fetch(`http://localhost:8080/email`, {
-    method: 'POST',
+    method: "POST",
     headers: {
-      aCcePt: 'application/json', 
-      'content-type': 'application/json'
+      aCcePt: "application/json",
+      "content-type": "application/json"
     },
-    body: JSON.stringify({ 
-      "data": {
-        "uid": user,
-        "displayName": username
+    body: JSON.stringify({
+      data: {
+        uid: user,
+        displayName: username
       },
-      "logNum": (currentLogAmmount) + 1
+      logNum: currentLogAmmount + 1
     })
   })
-  .then(res => res.json())  
-  .then(data => {
-    
-    // Everything has come back successfully, time to update the state to 
-    // reenable the button and stop the <Spinner>. Also, show a toast with a 
-    // message from the server to give the user feedback and reset the form 
-    // so the user can start over if she chooses.
-    notify.show(data.msg)
-    .then(function() {
-      window.location.reload();
+    .then(res => res.json())
+    .then(data => {
+      // Everything has come back successfully, time to update the state to
+      // reenable the button and stop the <Spinner>. Also, show a toast with a
+      // message from the server to give the user feedback and reset the form
+      // so the user can start over if she chooses.
+      notify.show(data.msg).then(function() {
+        window.location.reload();
+      });
     })
-  })
-    .catch(err => console.log(err))
-}
+    .catch(err => console.log(err));
+};
 
 class LogHourForm extends Component {
   constructor(props) {
@@ -64,9 +74,14 @@ class LogHourForm extends Component {
     };
   }
   mySubmitHandler = event => {
-    
     event.preventDefault();
-    updateHours(fire.auth().currentUser.uid, this.state, this.props.userName, this.props.currentLogAmmount, this.props.currentHourAmmount);
+    updateHours(
+      fire.auth().currentUser.uid,
+      this.state,
+      this.props.userName,
+      this.props.currentLogAmmount,
+      this.props.currentHourAmmount
+    );
     //export this.state.totalHours
   };
   hourChangeHandler = event => {
@@ -84,7 +99,7 @@ class LogHourForm extends Component {
   render() {
     return (
       <form onSubmit={this.mySubmitHandler}>
-        <h1>Hello, {this.props.userName}!</h1>
+        <h2>Hello, {this.props.userName}!</h2>
         <input
           id="hours"
           className="inputStyle"
