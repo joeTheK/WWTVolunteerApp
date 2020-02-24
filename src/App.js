@@ -1,3 +1,4 @@
+
 import React, { Component } from "react";
 import "./App.css";
 
@@ -16,13 +17,13 @@ import Community from "./pages/communityPage/community";
 import Opportunities from "./pages/opportunitiesPage/opportunities";
 import ourStory from "./pages/ourStoryPage/ourStoryPage";
 
+import Maps from "./pages/testMap/map";
+// import Api from "./server/api/cities.js"
+
 //FireBase
 import 'firebase/firestore';
 import fire from './config/firebaseConfig.config';
 var firestore = fire.firestore();
-
-import Maps from "./pages/testMap/map";
-// import Api from "./server/api/cities.js"
 
 class App extends Component {
   constructor() {
