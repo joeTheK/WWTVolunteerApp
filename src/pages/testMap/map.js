@@ -31,7 +31,7 @@ class Maps extends Component {
                 key={site.properties.popupContent}
                 position={[
                   site.geometry.coordinates[0],
-                  site.geometry.coordinates[1]
+                  site.geometry.coordinates[1],
                 ]}
               />
             );

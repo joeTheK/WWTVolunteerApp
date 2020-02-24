@@ -30,7 +30,6 @@
   z-index: 2;
   border: 1px solid rgba(0, 0, 0, 0.04);
   box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14);
-  
 }
 /* #xob {
   padding-top: 2%;
@@ -43,7 +42,6 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
-
 }
 
 li {
@@ -125,10 +123,10 @@ li {
   width: 0%;
   float: right;
 }
-#container{
-padding-left: 5%;
-padding-top: 2%;
+#container {
+  padding-left: 5%;
+  padding-top: 2%;
 }
-.DM{
-  color: #030D61;
+.DM {
+  color: #030d61;
 }
