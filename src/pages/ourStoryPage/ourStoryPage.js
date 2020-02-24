@@ -124,7 +124,7 @@ class ourStory extends Component {
               <img
                 src={sludm}
                 alt="Filler"
-                className="topPhoto btmPhoto"
+                className="topPhoto btmPhoto asdfqwer"
                 id="pic2"
               />
               {/* <img src={ria} alt="Filler" className="topPhoto" /> */}
