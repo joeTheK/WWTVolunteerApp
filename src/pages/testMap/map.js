@@ -26,7 +26,7 @@ class Maps extends Component {
             console.log(site.geometry.coordinates);
             return (
               <Marker
-                key={site.properties.popupContent}
+                key={site.properties.name}
                 position={[
                   site.geometry.coordinates[0],
                   site.geometry.coordinates[1]
