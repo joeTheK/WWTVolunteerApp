@@ -138,7 +138,7 @@ class Home extends Component {
                     alt="User Profile"
                     className="img-fluid img-profile"
                     id="pimg"
-                    style={{ marginBottom: "10px", height: "200px" }}
+                    style={{ marginBottom: "20px", height: "200px" }}
                   />
                   <div className="progress">
                     <div
@@ -168,7 +168,7 @@ class Home extends Component {
                     {this.state.fireuser.info.firstName} has{" "}
                     <span
                       style={{
-                        marginTop: "15px",
+                        marginTop: "20px",
                         color: "#030D61",
                         fontWeight: "bold",
                         fontSize: "larger"
