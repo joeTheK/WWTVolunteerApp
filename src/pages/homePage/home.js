@@ -113,7 +113,7 @@ class Home extends Component {
                 </div>
               </div>
               <br></br>
-              <div className="card" style={{ height: "245px" }}>
+              <div className="card" style={{ height: "400px" }}>
                 <div
                   className="card-body"
                   style={{
@@ -122,7 +122,6 @@ class Home extends Component {
                     marginBottom: "5px"
                   }}
                 >
-                  <MissionVision />
                 </div>
               </div>
             </div>
@@ -153,7 +152,7 @@ class Home extends Component {
                   </div>
                   <p>
                     {this.state.fireuser.info.firstName} has{" "}
-                    <span style={{ color: "#030D61", fontWeight: "bold" }}>
+                    <span style={{ color: "#030D61", fontWeight: "bold" , fontSize: "large"}}>
                       {this.state.fireuser.hours.totalHours}/100
                     </span>{" "}
                     hours completed
