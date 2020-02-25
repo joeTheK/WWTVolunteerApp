@@ -8,9 +8,13 @@
 #profile{
   height: 570px;
   width: 70%;
+  background: -webkit-linear-gradient(160deg, #fff 60%, #030d61 60%);
+  background: -o-linear-gradient(160deg, #fff 60%, #030d61 60%);
+  background: -moz-linear-gradient(160deg, #fff 60%, #030d61 60%);
+  background: linear-gradient(160deg, #fff 60%, #030d61 60%);
 }
 #pimg{
-  border-radius: 10px;
+  border-radius: 50%;
 }
 .inputStyle {
   background: whitesmoke;

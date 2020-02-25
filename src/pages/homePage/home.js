@@ -88,7 +88,7 @@ class Home extends Component {
 
   render() {
     if (!this.state.user || !this.state.fireuser) {
-      return <div>Loading</div>;
+      return <div>Loading...</div>;
     }
     const progressStyle = {
       width: this.state.fireuser.hours.totalHours + "%",
@@ -135,7 +135,7 @@ class Home extends Component {
                     alt="User Profile"
                     className="img-fluid img-profile"
                     id="pimg"
-                    style={{ marginBottom: "5px" , height: "250px" }}
+                    style={{ marginBottom: "10px" , height: "200px" }}
                   />
                   <div className="progress">
                     <div
@@ -151,13 +151,13 @@ class Home extends Component {
                       {/* {this.state.fireuser.hours.totalHours}% */}
                     </div>
                   </div>
-                  <p>
+                  <h4>
                     {this.state.fireuser.info.firstName} has{" "}
-                    <span style={{ color: "#030D61", fontWeight: "bold" , fontSize: "large"}}>
+                    <span style={{ marginTop: "15px" , color: "#030D61", fontWeight: "bold" , fontSize: "larger"}}>
                       {this.state.fireuser.hours.totalHours}/100
                     </span>{" "}
-                    hours completed
-                  </p>
+                    hours completed.
+                  </h4>
                 </div>
               </div>
             </div>

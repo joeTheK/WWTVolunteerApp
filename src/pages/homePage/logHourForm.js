@@ -99,7 +99,7 @@ class LogHourForm extends Component {
   render() {
     return (
       <form onSubmit={this.mySubmitHandler}>
-        <h2>Hello, {this.props.userName}!</h2>
+        <h3>Hello, {this.props.userName}!</h3>
         <input
           id="hours"
           className="inputStyle"
