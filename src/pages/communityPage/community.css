@@ -24,13 +24,19 @@
   }
   .feed {
     grid-area: feed;
-    padding-left: 5%;
-    padding-top: 5%;
-    margin: auto;
+    padding-top: 2%;
+    margin-left: 100px;
+    width: 300px;
+
+  }
+  #staff{
+    text-align: center;
+    text-decoration: underline;
   }
   .maps {
     grid-area: maps;
-    padding: 1em;
+    margin-right: 100px;
+    padding-top: 1%;
             
     /* background-color: green; */
   }
@@ -45,6 +51,10 @@
     transition: 0.3s;
     border-radius: 5px;
     font-family: "Quicksand", sans-serif;
+    width: 1005px;
+    float: right;
+    margin-right:100px;
+    margin-left: 8px;
   }
   .test {
     color: red;

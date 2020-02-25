@@ -37,7 +37,7 @@ class Community extends Component {
                 sourceType="profile"
                 screenName="Owl_Hours"
                 data-chrome="nofooter noheader"
-                options={{ height: 640, width: 500 }}
+                options={{ height: 645, width: 300 }}
               />
             </div>
             <div className="maps">
@@ -68,9 +68,10 @@ class Community extends Component {
         </LeafletMap></div>
 
             <div className="incent">
+              <h6 id="staff">Staff Announcements</h6>
               <p>
                 <img src={schenk} alt="Schenk:" className="schenk" />
-                <img src={trophy} alt="" className="trophy" /> Hawk House has
+                <img src={trophy} alt="" className="trophy" /> Schenk: Hawk House has
                 collected the most hours this semester and has won a free dress
                 down!
               </p>
