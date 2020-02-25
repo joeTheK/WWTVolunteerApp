@@ -55,12 +55,17 @@ class Maps extends Component {
             console.log(site.geometry.coordinates);
             return (
               <Marker
-                key={site.properties.name}
+                key={site.properties.amenity}
                 position={[
                   site.geometry.coordinates[1],
                   site.geometry.coordinates[0]
                 ]}
-              ></Marker>
+              >
+                <Popup>
+                  <h8>{site.properties.name}</h8>
+                  <p>{site.properties.amenity}</p>
+                </Popup>
+              </Marker>
             );
           })}
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"></TileLayer>
