@@ -86,7 +86,6 @@ ul {
 .btmPhoto {
   margin-top: 4%;
   height: 450px;
-  padding-bottom: 20px;
 }
 .specBtmCont {
   margin-top: 4%;
@@ -98,10 +97,15 @@ ul {
 }
 .stat {
   font-size: 24px;
+  color: #0d47a1;
+  font-weight: bold;
 }
 .secondarySpacing {
   margin-top: 20%;
 }
 .yeetbruh {
   text-align: right;
+}
+.asdfqwer {
+  margin-bottom: 20px;
 }

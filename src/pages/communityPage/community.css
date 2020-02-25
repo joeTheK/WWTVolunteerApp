@@ -24,14 +24,25 @@
   }
   .feed {
     grid-area: feed;
-    padding-left: 5%;
-    padding-top: 5%;
-    margin: auto;
+    padding-top: 2%;
+    margin-left: 100px;
+    width: 300px;
+
+  }
+  #staff{
+    text-align: center;
+    text-decoration: underline;
   }
   .maps {
     grid-area: maps;
-    padding: 1em;
-    background-color: green;
+    margin-right: 100px;
+    padding-top: 1%;
+            
+    /* background-color: green; */
+  }
+  .leaflet-container{
+    height: 510px !important;
+    width: 1000px !important;
   }
   .incent {
     background-color: white;
@@ -40,6 +51,10 @@
     transition: 0.3s;
     border-radius: 5px;
     font-family: "Quicksand", sans-serif;
+    width: 1005px;
+    float: right;
+    margin-right:100px;
+    margin-left: 8px;
   }
   .test {
     color: red;
@@ -64,9 +79,10 @@
   }
 
   .maps {
-    margin-top: 5px;
-    padding: 1em;
+    /* margin-top: 5px;
+    padding: 1em; */
     height: 70vh;
+    width:auto;
     background-color: green;
   }
   .incent {

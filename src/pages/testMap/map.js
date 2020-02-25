@@ -9,7 +9,9 @@ import L from "leaflet";
 class Maps extends Component {
   render() {
     return (
+    
       <React.Fragment>
+        <Navbar />
         <LeafletMap
           center={[38.65, -90.25]}
           zoom={11}
@@ -29,7 +31,7 @@ class Maps extends Component {
                 key={site.properties.name}
                 position={[
                   site.geometry.coordinates[0],
-                  site.geometry.coordinates[1]
+                  site.geometry.coordinates[1],
                 ]}
               />
             );
