@@ -136,9 +136,9 @@ class Opportunities extends Component {
       dataToShow = this.filterListForSports(this.filterList(data));
     }
     return (
-      <div className="OpportunitiesBody">
+      <div id = "xob"className="OpportunitiesBody">
         <Navbar />
-        <div id="xob">
+        <div >
           {/* <Button onClick={this.showAll}>ALL</Button>{" "} */}
           {/* <Button onClick={this.showOnlyValid}>Only Valid</Button> */}
           {/* <Button onClick={this.showOnlyWomen}>Women</Button> */}
@@ -156,6 +156,9 @@ class Opportunities extends Component {
             {this.state.open && (
               <div class="dropdown">
                 <ul className="list">
+                <li>
+                    <Button onClick={this.showAll}>ALL</Button>{" "}
+                  </li>
                   <li>
                     <Button onClick={this.showOnlyRac}>Racial/Ethnic</Button>
                   </li>
@@ -176,14 +179,13 @@ class Opportunities extends Component {
                       Environmental
                     </Button>
                   </li>
-                  <li>
-                    <Button onClick={this.showOnlyLegal}>Legal</Button>
-                  </li>
-                  <li>
-                    <Button onClick={this.showAll}>ALL</Button>{" "}
-                  </li>
+                  
+                  
                 </ul>
                 <ul className="list">
+                <li>
+                    <Button onClick={this.showOnlyLegal}>Legal</Button>
+                  </li>
                   <li>
                     <Button onClick={this.showOnlyHealth}>Health</Button>
                   </li>
@@ -196,12 +198,13 @@ class Opportunities extends Component {
                   <li>
                     <Button onClick={this.showOnlyHome}>Homelessness</Button>
                   </li>
+                  
                   <li>
-                    <Button onClick={this.showOnlyCommunity}>Community</Button>
+                    <Button onClick={this.showOnlySports}>Sports</Button>
                   </li>
-                  <li>
+                  {/* <li>
                     <Button onClick={this.showOnlyMusic}>Music</Button>
-                  </li>
+                  </li> */}
                   <li>
                     <Button onClick={this.showOnlyFaith}>Faith</Button>
                   </li>
@@ -226,7 +229,7 @@ class Opportunities extends Component {
                     <Button onClick={this.showOnlyFitness}>Fitness</Button>
                   </li>
                   <li>
-                    <Button onClick={this.showOnlySports}>Sports</Button>
+                    <Button onClick={this.showOnlyCommunity}>Community</Button>
                   </li>
                 </ul>
               </div>

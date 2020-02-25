@@ -14,7 +14,7 @@ class ourStory extends Component {
   }
   render() {
     return (
-      <div>
+      <div id = "xob">
         <Navbar />
         {/* <div className="firstSec">
           <p className="firstSecA">At CSMB We Value Service</p>
@@ -22,11 +22,15 @@ class ourStory extends Component {
           <p className="firstSecB">Compassion and Ethics</p>
           <p className="firstSecC">one of our six core values</p>
         </div> */}
+        <div className = "">
         <img
           src="https://restorestlouis.org/wp-content/uploads/2016/04/TFS-Edit.jpg"
           alt="Freedom School"
-          className="topPhoto"
+          className="topPhoto "
+          // style={{ width: "70%" }}
         />
+        </div>
+        <div className = "container card" id = "csc">
         <div className="container">
           <div className="row">
             {/* <div className="col-4 cande topboys">Our Values</div> */}
@@ -70,13 +74,17 @@ class ourStory extends Component {
             </div>
           </div>
         </div>
-
-        <div className="card">
-          <div className="card-body">
-            <MissionVision />
-          </div>
+        <div className = "card-body">
+        <MissionVision />
         </div>
-        <div className="container specBtmCont">
+                    
+
+        </div>
+        {/* <div className="card">
+          <div className="card-body"> */}
+          {/* </div>
+        </div> */}
+        <div className="container specBtmCont card">
           <div className="row ">
             <div className="col-7">
               {/* <img src={campBarn} alt="Filler" className="topPhoto" /> */}
@@ -84,7 +92,7 @@ class ourStory extends Component {
                 src={homelessB}
                 alt="Filler"
                 className="topPhoto btmPhoto"
-                id="pic"
+                id="pic1"
               />
               {/* <img src={ria} alt="Filler" className="topPhoto" /> */}
             </div>
@@ -104,7 +112,7 @@ class ourStory extends Component {
             </div>
           </div>
         </div>
-        <div className="container specBtmCont">
+        <div className="container specBtmCont card">
           <div className="row ">
             <div className="col-5 pollRes yeetbruh">
               <div>
@@ -125,7 +133,7 @@ class ourStory extends Component {
                 src={sludm}
                 alt="Filler"
                 className="topPhoto btmPhoto asdfqwer"
-                id="pic2"
+                id="pic3"
               />
               {/* <img src={ria} alt="Filler" className="topPhoto" /> */}
             </div>

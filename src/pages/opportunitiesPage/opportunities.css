@@ -77,7 +77,9 @@ margin-bottom: 10%;
 width: 90%;
   }
 }
-
+#csc{
+  margin-top: 5%;
+}
 @media only screen and (max-width: 699px) {
   .op_contain {
     display: grid;
@@ -102,9 +104,9 @@ width: 90%;
     margin-top: 2.5%;
   }
 }
-.ui card{
+/* .ui card{
   margin: auto
-}
+} */
 .dropdown {
   position: absolute;
   top: 100%;
@@ -132,7 +134,7 @@ li {
 #xob{
   background-image: linear-gradient(#030d61, #477b80, #7cb79a, #c4c4c4);
   background-attachment:fixed;
-
+padding-bottom: 1%;
 }
 .list {
   width: 50%;

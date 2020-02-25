@@ -14,7 +14,6 @@ class Navbar extends Component {
       collapsed: true
     };
   }
-
   //Logout
   logout() {
     firebase.auth().signOut();
