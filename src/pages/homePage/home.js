@@ -113,7 +113,7 @@ class Home extends Component {
                 </div>
               </div>
               <br></br>
-              <div className="card" style={{ height: "400px" }}>
+              <div className="card" style={{ height: "300px" }}>
                 <div
                   className="card-body"
                   style={{
@@ -135,7 +135,7 @@ class Home extends Component {
                     alt="User Profile"
                     className="img-fluid img-profile"
                     id="pimg"
-                    style={{ marginBottom: "5px", height: "250px" }}
+                    style={{ marginBottom: "5px" , height: "250px" }}
                   />
                   <div className="progress">
                     <div
