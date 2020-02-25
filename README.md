@@ -1,2 +1,2 @@
-## <center>The CSMB WWT Volunteer App: Owl Hours </center>
+## The CSMB WWT Volunteer App: Owl Hours 
 ![](process.png)
