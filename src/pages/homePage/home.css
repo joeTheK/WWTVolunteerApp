@@ -1,4 +1,5 @@
 .HomeBody {
+  min-height: 100vh;
   text-align: center;
   font-style: normal;
   background-image: linear-gradient(#030d61, #477b80, #7cb79a, #c4c4c4);
