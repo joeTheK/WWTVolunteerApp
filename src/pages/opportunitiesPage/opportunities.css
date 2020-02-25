@@ -134,6 +134,9 @@ li {
   background-attachment:fixed;
 
 }
+#filt{
+  margin-left: 25px;
+}
 .list {
   width: 50%;
   float: left;
