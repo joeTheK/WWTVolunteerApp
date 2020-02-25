@@ -88,12 +88,17 @@ class Home extends Component {
 
   render() {
     if (!this.state.user || !this.state.fireuser) {
-      return <div>Loading</div>;
+      return <div>Loading...</div>;
     }
     const progressStyle = {
       width: this.state.fireuser.hours.totalHours + "%",
       color: "white",
       backgroundColor: "#030D61"
+    };
+    const untrackedProgressStyle = {
+      width: 10 /* Add untracked hours here! */ + "%",
+      color: "white",
+      backgroundColor: "#9E9E9E"
     };
     return (
       <div className="HomeBody">
@@ -121,8 +126,7 @@ class Home extends Component {
                     paddingRight: "25%",
                     marginBottom: "5px"
                   }}
-                >
-                </div>
+                ></div>
               </div>
             </div>
             <div className="col-sm-5">
@@ -130,12 +134,11 @@ class Home extends Component {
               <div className="card" id="profile">
                 <div className="card-body">
                   <img
-                    // src={corwin}
                     src={this.state.fireuser.info.userPicture}
                     alt="User Profile"
                     className="img-fluid img-profile"
                     id="pimg"
-                    style={{ marginBottom: "5px" , height: "250px" }}
+                    style={{ marginBottom: "20px", height: "200px" }}
                   />
                   <div className="progress">
                     <div
@@ -150,14 +153,31 @@ class Home extends Component {
                     >
                       {/* {this.state.fireuser.hours.totalHours}% */}
                     </div>
+                    <div
+                      className="progress-bar progress-bar-striped progress-bar-animated"
+                      role="progressbar"
+                      style={untrackedProgressStyle}
+                      aria-valuenow={10 /* Add untracked hours here! */}
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      {/* {this.state.fireuser.hours.totalHours}% */}
+                    </div>
                   </div>
-                  <p>
+                  <h4>
                     {this.state.fireuser.info.firstName} has{" "}
-                    <span style={{ color: "#030D61", fontWeight: "bold" , fontSize: "large"}}>
+                    <span
+                      style={{
+                        marginTop: "20px",
+                        color: "#030D61",
+                        fontWeight: "bold",
+                        fontSize: "larger"
+                      }}
+                    >
                       {this.state.fireuser.hours.totalHours}/100
                     </span>{" "}
-                    hours completed
-                  </p>
+                    hours completed.
+                  </h4>
                 </div>
               </div>
             </div>

@@ -8,10 +8,15 @@
 #profile{
   height: 570px;
   width: 70%;
+  background-image: -webkit-linear-gradient(160deg, #030d61 30%, #fff 30%);
+  background-image: -o-linear-gradient(160deg, #030d61 30%, #fff 30%);
+  background-image: -moz-linear-gradient(160deg, #030d61 30%, #fff 30%);
+  background-image: linear-gradient(160deg, #030d61 30%, #fff 30%);
 }
 #pimg{
-  border-radius: 10px;
+  border-radius: 50%;
 }
+
 .inputStyle {
   background: whitesmoke;
   border: none;

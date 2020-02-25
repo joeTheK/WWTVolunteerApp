@@ -99,7 +99,7 @@ class LogHourForm extends Component {
   render() {
     return (
       <form onSubmit={this.mySubmitHandler}>
-        <h2>Hello, {this.props.userName}!</h2>
+        <h3>Hello, {this.props.userName}!</h3>
         <input
           id="hours"
           className="inputStyle"
@@ -136,7 +136,7 @@ class LogHourForm extends Component {
           type="submit"
           className="btn btn-info"
           style={{
-            marginTop: "5px",
+            marginTop: "15px",
             backgroundColor: "#030D61",
             borderColor: "#030D61"
           }}
