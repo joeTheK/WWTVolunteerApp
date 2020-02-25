@@ -128,13 +128,14 @@ class Home extends Component {
             </div>
             <div className="col-sm-5">
               {/* Side Bar */}
-              <div className="card">
+              <div className="card" id="profile">
                 <div className="card-body">
                   <img
                     // src={corwin}
                     src={this.state.fireuser.info.userPicture}
                     alt="User Profile"
                     className="img-fluid img-profile"
+                    id="pimg"
                     style={{ marginBottom: "5px", height: "250px" }}
                   />
                   <div className="progress">

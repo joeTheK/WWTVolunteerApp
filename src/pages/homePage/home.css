@@ -5,7 +5,13 @@
   background-image: linear-gradient(#030d61, #477b80, #7cb79a, #c4c4c4);
   background-attachment: fixed;
 }
-
+#profile{
+  height:550px;
+  width:70%;
+}
+#pimg{
+  border-radius: 10px;
+}
 .inputStyle {
   background: whitesmoke;
   border: none;
