@@ -74,11 +74,7 @@ class Navbar extends Component {
                 Story
               </Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/Map">
-                Map
-              </Link>
-            </li>
+
             <li className="nav-item">
               <button className="btn btn-outline-primary" onClick={this.logout}>
                 Logout
