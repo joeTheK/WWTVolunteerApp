@@ -51,24 +51,108 @@ class Community extends Component {
           dragging={true}
           animate={true}
           easeLinearity={0.35}
+                        >
+                         
+      
+        
+      <React.Fragment>
+         
+      <LeafletMap
+       center={[38.65, -90.25]}
+        zoom={11}
+        attributionControl={true}
+          zoomControl={true}
+          doubleClickZoom={true}
+          scrollWheelZoom={false}
+            dragging={true}
+              animate={true}
+             easeLinearity={0.35}
+             >
+           <Marker position={[38.65, -90.25]}>
+              <img
+              src={
+                "https://upload.wikimedia.org/wikipedia/commons/8/88/Map_marker.svg"
+                }
+                 width="15"
+                ></img>
+              </Marker>
+               {siteData.features.map(site => {
+             console.log(site.geometry.coordinates);
+              return (
+            <Marker
+                 key={site.properties.amenity}
+                  position={[
+                  site.geometry.coordinates[1],
+                  site.geometry.coordinates[0]
+                   ]}
+                                            >
+                                                <Popup>
+                                                    <h8>{site.properties.name}</h8>
+                                                    <p>{site.properties.amenity}</p>
+                                                </Popup>
+                                            </Marker>
+                                        );
+                                    })}
+                                    class Maps extends Component {
+  
+      <React.Fragment>
+      
+        //<LeafletMap
+          center={[38.65, -90.25]}
+          zoom={11}
+          attributionControl={true}
+          zoomControl={true}
+          doubleClickZoom={true}
+         scrollWheelZoom={false}
+          dragging={true}
+          animate={true}
+          easeLinearity={0.35}
         >
-          <TileLayer url="https://{s}.tile.osm.org/{z}/{x}/{y}.png" />
+         <Marker position={[38.65, -90.25]}>
+            <img
+              src={
+                "https://upload.wikimedia.org/wikipedia/commons/8/88/Map_marker.svg"
+              }
+              width="15"
+            ></img>
+</Marker>
           {siteData.features.map(site => {
             console.log(site.geometry.coordinates);
-            return (
+           return (
               <Marker
-                key={site.properties.popupContent}
+                key={site.properties.amenity}
                 position={[
-                  site.geometry.coordinates[0],
-                  site.geometry.coordinates[1],
+                 site.geometry.coordinates[1],
+                  site.geometry.coordinates[0]
                 ]}
-              />
+              >
+                <Popup>
+                  <h8>{site.properties.name}</h8>
+                 <p>{site.properties.amenity}</p>
+</Popup>
+              </Marker>
+            );
+         })}
+          <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"></TileLayer>
+        </LeafletMap>
+      </React.Fragment>
+   //);
+  }
+}
+export default Maps;
+                                   <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"></TileLayer>
+                                </LeafletMap>
+                            </React.Fragment>
+    //);
+                          }
+                       
+                     export default Maps;
+      
             );
           })}
         </LeafletMap></div>
 
-            <div classname="card" id="incent">
-            <div className="card-body">
+            <div className="incent">
               <h6 id="staff">Staff Announcements</h6>
               <p>
                 <img src={schenk} alt="Schenk:" className="schenk" />
@@ -76,7 +160,6 @@ class Community extends Component {
                 collected the most hours this semester and has won a free dress
                 down!
               </p>
-              </div>
             </div>
           </div>
         </div>
