@@ -67,7 +67,8 @@ class Community extends Component {
           })}
         </LeafletMap></div>
 
-            <div className="incent">
+            <div classname="card" id="incent">
+            <div className="card-body">
               <h6 id="staff">Staff Announcements</h6>
               <p>
                 <img src={schenk} alt="Schenk:" className="schenk" />
@@ -75,6 +76,7 @@ class Community extends Component {
                 collected the most hours this semester and has won a free dress
                 down!
               </p>
+              </div>
             </div>
           </div>
         </div>
