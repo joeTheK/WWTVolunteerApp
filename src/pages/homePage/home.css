@@ -12,6 +12,7 @@
   background-image: -o-linear-gradient(160deg, #030d61 30%, #fff 30%);
   background-image: -moz-linear-gradient(160deg, #030d61 30%, #fff 30%);
   background-image: linear-gradient(160deg, #030d61 30%, #fff 30%);
+  border: none;
 }
 #pimg{
   border-radius: 50%;
