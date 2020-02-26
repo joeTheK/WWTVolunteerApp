@@ -81,7 +81,7 @@ class Community extends Component {
               </LeafletMap>
             </div>
 
-            <div className="incent">
+            <div id="incent">
               <h6 id="staff">Staff Announcements</h6>
               <p>
                 <img src={schenk} alt="Schenk:" className="schenk" />
