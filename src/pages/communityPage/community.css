@@ -65,6 +65,10 @@
 }
 
 @media only screen and (max-width: 500px) {
+  .leaflet-container {
+    height: 75% !important;
+    width: 80% !important;
+  }
   .boi {
     padding: 10px;
   }
