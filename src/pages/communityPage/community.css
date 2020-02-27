@@ -15,11 +15,7 @@
     width: 100%;
     max-height: 100%;
     display: grid;
-    grid-template:
-      "feed  maps maps"
-      "feed  maps maps"
-      "feed  maps maps "
-      "feed incent incent";
+    grid-template: "feed  maps maps" "feed  maps maps" "feed  maps maps " "feed incent incent";
     grid-template-rows: 36em;
   }
   .feed {
@@ -27,9 +23,8 @@
     padding-top: 2%;
     margin-left: 100px;
     width: 300px;
-
   }
-  #staff{
+  #staff {
     text-align: center;
     text-decoration: underline;
   }
@@ -37,10 +32,9 @@
     grid-area: maps;
     margin-right: 100px;
     padding-top: 1%;
-            
     /* background-color: green; */
   }
-  .leaflet-container{
+  .leaflet-container {
     height: 510px !important;
     width: 1000px !important;
   }
@@ -59,15 +53,22 @@
     color: red;
   }
 }
+
 .trophy {
   height: 2%;
   width: 2%;
 }
+
 .schenk {
   height: 5%;
   width: 5%;
 }
+
 @media only screen and (max-width: 500px) {
+  .leaflet-container {
+    height: 75% !important;
+    width: 80% !important;
+  }
   .boi {
     padding: 10px;
   }
@@ -76,13 +77,11 @@
     width: 100%;
     height: 100vh;
   }
-
   .maps {
     /* margin-top: 5px;
     padding: 1em; */
     height: 70vh;
-    width:auto;
-    background-color: green;
+    width: auto;
   }
   #incent {
     background-color: white;
