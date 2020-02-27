@@ -76,9 +76,7 @@ class App extends Component {
                         siteName: "CSMB Student Council",
                         siteAddress: "1547 S Theresa Ave, St. Louis, MO 63104",
                         siteCoordinatorEmail: "stuco@csmb-stl.org"
-                      }
-                    },
-                    hourslogged: {
+                      },
                       "2": {
                         confirmed: false,
                         siteHours: 5,
@@ -86,7 +84,7 @@ class App extends Component {
                         siteAddress: "1547 S Theresa Ave, St. Louis, MO 63104",
                         siteCoordinatorEmail: "stuco@csmb-stl.org"
                       }
-                    }
+                    },
                   }
                 });
             }
