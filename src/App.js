@@ -67,13 +67,22 @@ class App extends Component {
 
                   //Sets User Data Info
                   hours: {
-                    totalHours: 20,
+                    totalHours: 25,
                     totalLogged: 2,
                     hourslogged: {
                       "1": {
                         confirmed: true,
                         siteHours: 20,
                         siteName: "CSMB Student Council",
+                        siteAddress: "1547 S Theresa Ave, St. Louis, MO 63104",
+                        siteCoordinatorEmail: "stuco@csmb-stl.org"
+                      }
+                    },
+                    hourslogged: {
+                      "2": {
+                        confirmed: false,
+                        siteHours: 5,
+                        siteName: "CSMB WWT",
                         siteAddress: "1547 S Theresa Ave, St. Louis, MO 63104",
                         siteCoordinatorEmail: "stuco@csmb-stl.org"
                       }
