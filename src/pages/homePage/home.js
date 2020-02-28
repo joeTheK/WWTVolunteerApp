@@ -9,33 +9,6 @@ import "firebase/firestore";
 import fire from "../../config/firebaseConfig.config";
 var firestore = fire.firestore();
 
-//email stuff the things aren't in the right place currently
-// import 'express';
-// var nodemailer = require('nodemailer');
-
-// var transporter = nodemailer.createTransport({
-//   service: 'gmail',
-//   auth: {
-//     user: 'wwtech2020@gmail.com',
-//     pass: 'l0gmein2u'
-//   }
-// });
-
-// var mailOptions = {
-//   from: 'wwtech2020@gmail.com',
-//   to: this.state.coordEmail,
-//   subject: this.props.userName + ' would like to verify ' + this.state.hours + 'hours of community service at your facility. Respond "yes" to verify and "no" no nullify.',
-//   text: 'That was easy!'
-// };
-
-// transporter.sendMail(mailOptions, function(error, info){
-//   if (error) {
-//     console.log(error);
-//   } else {
-//     console.log('Email sent: ' + info.response);
-//   }
-// });
-
 class Home extends Component {
   constructor(props) {
     super(props);
