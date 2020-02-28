@@ -29,7 +29,7 @@ const updateHours = function(
               siteCoordinatorEmail: data.coordEmail
             }
           },
-          totalHours: Number(Number(currentHourAmmount) + Number(data.hours)),
+          totalUnconfirmedHours: Number(Number(currentHourAmmount) + Number(data.hours)),
           totalLogged: currentLogAmmount + 1
         }
       },

@@ -113,7 +113,7 @@ class Home extends Component {
                   <LogHourForm
                     userName={this.state.user.displayName}
                     currentLogAmmount={this.state.fireuser.hours.totalLogged}
-                    currentHourAmmount={this.state.fireuser.hours.totalHours}
+                    currentHourAmmount={this.state.fireuser.hours.totalUnverifiedHours}
                   />
                 </div>
               </div>
@@ -151,17 +151,19 @@ class Home extends Component {
                       aria-valuemin="0"
                       aria-valuemax="100"
                     >
-                      {/* {this.state.fireuser.hours.totalHours}% */}
+                      <b>C</b>{/* {this.state.fireuser.hours.totalHours}% */}
                     </div>
                     <div
                       className="progress-bar progress-bar-striped progress-bar-animated"
                       role="progressbar"
                       style={untrackedProgressStyle}
-                      aria-valuenow={this.state.fireuser.hours.totalHours /* Add untracked hours here! */}
+                      aria-valuenow={parseInt(
+                        this.state.fireuser.hours.totalUnverifiedHours
+                      )}
                       aria-valuemin="0"
                       aria-valuemax="100"
                     >
-                      {/* {this.state.fireuser.hours.totalHours}% */}
+                      <b>U</b>{/* {this.state.fireuser.hours.totalHours}% */}
                     </div>
                   </div>
                   <h4>
@@ -174,7 +176,7 @@ class Home extends Component {
                         fontSize: "larger"
                       }}
                     >
-                      {this.state.fireuser.hours.totalHours}/100
+                      {this.state.fireuser.hours.totalHours + this.state.fireuser.hours.totalUnverifiedHours}/100
                     </span>{" "}
                     hours completed.
                   </h4>
