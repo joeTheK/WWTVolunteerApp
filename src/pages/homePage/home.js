@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Navbar from "../components/Navbar";
 import LogHourForm from "./logHourForm";
-import MissionVision from "../components/MissionVision";
+//import MissionVision from "../components/MissionVision";
 import "./home.css";
 
 //Firebase

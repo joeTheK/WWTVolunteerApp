@@ -7,7 +7,15 @@ import "firebase/firestore";
 import fire from "../../config/firebaseConfig.config";
 var firestore = fire.firestore();
 
-var CLIENT_ORIGIN = 'https://owlhours.us/api' || `http://localhost:8080`
+if (process.env.NODE_ENV === 'production') {
+  console.log("Production");
+  var CLIENT_ORIGIN = 'https://owlhours.us/api/'
+  
+}
+else {
+  console.log("Development");
+  var CLIENT_ORIGIN = `http://localhost:8080`
+}
 
 const updateHours = function(
   user,
