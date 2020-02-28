@@ -60,11 +60,10 @@ class App extends Component {
                 .set({
                   //Sets User Profile Info
                   info: {
-                    firstName: namesplit[0],
-                    lastName: namesplit[1],
+                    firstName: namesplit[0] || name,
+                    lastName: namesplit[1] || "",       
                     userPicture: user.photoURL
                   },
-
                   //Sets User Data Info
                   hours: {
                     totalHours: 20,
