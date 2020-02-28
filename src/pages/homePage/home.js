@@ -63,16 +63,21 @@ class Home extends Component {
     if (!this.state.user || !this.state.fireuser) {
       return <div>Loading...</div>;
     }
+
+    console.log("Loaded....")
+    console.log(this.state.user, this.state.fireuser)
+
     const progressStyle = {
-      width: this.state.fireuser.hours.totalHours + "%",
+      width: parseInt(this.state.fireuser.hours.totalHours) + "%",
       color: "white",
       backgroundColor: "#030D61"
     };
     const untrackedProgressStyle = {
-      width: this.state.fireuser.hours.totalUnverifiedHours + "%",
+      width: parseInt(this.state.fireuser.hours.totalUnverifiedHours) + "%",
       color: "white",
       backgroundColor: "#9E9E9E"
     };
+
     return (
       <div className="HomeBody">
         <Navbar />
@@ -118,9 +123,7 @@ class Home extends Component {
                       className="progress-bar progress-bar-striped progress-bar-animated"
                       role="progressbar"
                       style={progressStyle}
-                      aria-valuenow={parseInt(
-                        this.state.fireuser.hours.totalHours
-                      )}
+                      aria-valuenow={parseInt(this.state.fireuser.hours.totalHours)}
                       aria-valuemin="0"
                       aria-valuemax="100"
                     >
@@ -130,9 +133,7 @@ class Home extends Component {
                       className="progress-bar progress-bar-striped progress-bar-animated"
                       role="progressbar"
                       style={untrackedProgressStyle}
-                      aria-valuenow={parseInt(
-                        this.state.fireuser.hours.totalUnverifiedHours
-                      )}
+                      aria-valuenow={parseInt(this.state.fireuser.hours.totalUnverifiedHours)}
                       aria-valuemin="0"
                       aria-valuemax="100"
                     >
