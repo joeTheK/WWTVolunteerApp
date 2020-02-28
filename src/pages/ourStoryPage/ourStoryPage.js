@@ -22,14 +22,14 @@ class ourStory extends Component {
           <p className="firstSecB">Compassion and Ethics</p>
           <p className="firstSecC">one of our six core values</p>
         </div> */}
-        <div className = "">
+        {/* <div className = "">
         <img
-          src="https://restorestlouis.org/wp-content/uploads/2016/04/TFS-Edit.jpg"
+          src="image here"
           alt="Freedom School"
           className="topPhoto "
           // style={{ width: "70%" }}
         />
-        </div>
+      </div>*/}
         <div className = "container card" id = "csc">
         <div className="container">
           <div className="row">
