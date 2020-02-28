@@ -56,7 +56,11 @@ class Home extends Component {
     setTimeout(ensureFireAuth, 500);
 
     //Debugging
-    console.log(this.state.user, this.state.fireuser);
+    console.log(
+      this.state.user,
+      this.state.fireuser,
+      this.state.fireuser.hours.hourslogged
+    );
   }
 
   render() {
@@ -64,8 +68,8 @@ class Home extends Component {
       return <div>Loading...</div>;
     }
 
-    console.log("Loaded....")
-    console.log(this.state.user, this.state.fireuser)
+    console.log("Loaded....");
+    console.log(this.state.user, this.state.fireuser);
 
     const progressStyle = {
       width: parseInt(this.state.fireuser.hours.totalHours) + "%",
@@ -91,7 +95,9 @@ class Home extends Component {
                   <LogHourForm
                     userName={this.state.user.displayName}
                     currentLogAmmount={this.state.fireuser.hours.totalLogged}
-                    currentHourAmmount={this.state.fireuser.hours.totalUnverifiedHours}
+                    currentHourAmmount={
+                      this.state.fireuser.hours.totalUnverifiedHours
+                    }
                   />
                 </div>
               </div>
@@ -123,21 +129,27 @@ class Home extends Component {
                       className="progress-bar progress-bar-striped progress-bar-animated"
                       role="progressbar"
                       style={progressStyle}
-                      aria-valuenow={parseInt(this.state.fireuser.hours.totalHours)}
+                      aria-valuenow={parseInt(
+                        this.state.fireuser.hours.totalHours
+                      )}
                       aria-valuemin="0"
                       aria-valuemax="100"
                     >
-                      <b>C</b>{/* {this.state.fireuser.hours.totalHours}% */}
+                      <b>C</b>
+                      {/* {this.state.fireuser.hours.totalHours}% */}
                     </div>
                     <div
                       className="progress-bar progress-bar-striped progress-bar-animated"
                       role="progressbar"
                       style={untrackedProgressStyle}
-                      aria-valuenow={parseInt(this.state.fireuser.hours.totalUnverifiedHours)}
+                      aria-valuenow={parseInt(
+                        this.state.fireuser.hours.totalUnverifiedHours
+                      )}
                       aria-valuemin="0"
                       aria-valuemax="100"
                     >
-                      <b>U</b>{/* {this.state.fireuser.hours.totalHours}% */}
+                      <b>U</b>
+                      {/* {this.state.fireuser.hours.totalHours}% */}
                     </div>
                   </div>
                   <h4>
@@ -150,7 +162,9 @@ class Home extends Component {
                         fontSize: "larger"
                       }}
                     >
-                      {this.state.fireuser.hours.totalHours + this.state.fireuser.hours.totalUnverifiedHours}/100
+                      {this.state.fireuser.hours.totalHours +
+                        this.state.fireuser.hours.totalUnverifiedHours}
+                      /100
                     </span>{" "}
                     hours completed.
                   </h4>
@@ -165,3 +179,8 @@ class Home extends Component {
 }
 
 export default Home;
+
+//# of hours this.fireuser.hours.hourslogged
+/* for(i=1; i<this.fireuser.hours.totalLogged; i++){
+  console.log(this.fireuser.hours.hourslogged)
+} */
