@@ -67,7 +67,8 @@ class App extends Component {
 
                   //Sets User Data Info
                   hours: {
-                    totalHours: 25,
+                    totalHours: 20,
+                    totalUnverifiedHours: 5,
                     totalLogged: 2,
                     hourslogged: {
                       "1": {

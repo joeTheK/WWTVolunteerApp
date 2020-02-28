@@ -157,7 +157,7 @@ class Home extends Component {
                       className="progress-bar progress-bar-striped progress-bar-animated"
                       role="progressbar"
                       style={untrackedProgressStyle}
-                      aria-valuenow={10 /* Add untracked hours here! */}
+                      aria-valuenow={this.state.fireuser.hours.totalHours /* Add untracked hours here! */}
                       aria-valuemin="0"
                       aria-valuemax="100"
                     >
