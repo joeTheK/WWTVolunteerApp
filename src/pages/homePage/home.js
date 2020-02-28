@@ -96,7 +96,7 @@ class Home extends Component {
       backgroundColor: "#030D61"
     };
     const untrackedProgressStyle = {
-      width: 10 /* Add untracked hours here! */ + "%",
+      width: this.state.fireuser.hours.totalUnverifiedHours + "%",
       color: "white",
       backgroundColor: "#9E9E9E"
     };

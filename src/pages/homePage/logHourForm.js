@@ -7,6 +7,11 @@ import "firebase/firestore";
 import fire from "../../config/firebaseConfig.config";
 var firestore = fire.firestore();
 
+if (process.env.NODE_ENV === 'production' || 'development') {
+  process.env.CLIENT_ORIGIN = 'https://owlhours.us/api/'
+}
+var CLIENT_ORIGIN = process.env.CLIENT_ORIGIN || `http://localhost:8080`
+
 const updateHours = function(
   user,
   data,
@@ -36,10 +41,10 @@ const updateHours = function(
       { merge: true }
     );
 
-  fetch(`http://localhost:8080/email`, {
+  fetch(CLIENT_ORIGIN + '/email', {
     method: "POST",
     headers: {
-      aCcePt: "application/json",
+      accept: "application/json",
       "content-type": "application/json"
     },
     body: JSON.stringify({
@@ -52,13 +57,9 @@ const updateHours = function(
   })
     .then(res => res.json())
     .then(data => {
-      // Everything has come back successfully, time to update the state to
-      // reenable the button and stop the <Spinner>. Also, show a toast with a
-      // message from the server to give the user feedback and reset the form
-      // so the user can start over if she chooses.
-      notify.show(data.msg).then(function() {
-        window.location.reload();
-      });
+      //this.setState({ sendingEmail: false})
+      notify.show(data.msg)
+      this.form.reset()
     })
     .catch(err => console.log(err));
 };
@@ -98,7 +99,8 @@ class LogHourForm extends Component {
   };
   render() {
     return (
-      <form onSubmit={this.mySubmitHandler}>
+      <form onSubmit={this.mySubmitHandler}
+        ref={form => this.form = form}>
         <h3>Hello, {this.props.userName}!</h3>
         <input
           id="hours"
