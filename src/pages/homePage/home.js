@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Navbar from "../components/Navbar";
 import LogHourForm from "./logHourForm";
+import LoggedHourTable from "./loggedHourTable";
 //import MissionVision from "../components/MissionVision";
 import "./home.css";
 
@@ -54,22 +55,16 @@ class Home extends Component {
     //Call Functions w/ TimeOut...
     setTimeout(ensureAuth, 500);
     setTimeout(ensureFireAuth, 500);
-
-    //Debugging
-    console.log(
-      this.state.user,
-      this.state.fireuser,
-      this.state.fireuser.hours.hourslogged
-    );
   }
-
+  
   render() {
     if (!this.state.user || !this.state.fireuser) {
       return <div>Loading...</div>;
     }
 
+    //Debugging
     console.log("Loaded....");
-    console.log(this.state.user, this.state.fireuser);
+    console.log(this.state.user, this.state.fireuser, this.state.fireuser.hours.hourslogged);
 
     const progressStyle = {
       width: parseInt(this.state.fireuser.hours.totalHours) + "%",
@@ -105,12 +100,11 @@ class Home extends Component {
               <div className="card" style={{ height: "300px" }}>
                 <div
                   className="card-body"
-                  style={{
-                    paddingLeft: "25%",
-                    paddingRight: "25%",
-                    marginBottom: "5px"
-                  }}
-                ></div>
+                >
+                  <LoggedHourTable
+                    currentHourData={this.state.fireuser.hours}
+                  />
+                </div>
               </div>
             </div>
             <div className="col-sm-5">
@@ -135,7 +129,7 @@ class Home extends Component {
                       aria-valuemin="0"
                       aria-valuemax="100"
                     >
-                      <b>C</b>
+                      {/* <b>C</b> */}
                       {/* {this.state.fireuser.hours.totalHours}% */}
                     </div>
                     <div
@@ -148,7 +142,7 @@ class Home extends Component {
                       aria-valuemin="0"
                       aria-valuemax="100"
                     >
-                      <b>U</b>
+                      {/* <b>U</b> */}
                       {/* {this.state.fireuser.hours.totalHours}% */}
                     </div>
                   </div>

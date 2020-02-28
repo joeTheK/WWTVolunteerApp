@@ -59,7 +59,7 @@ exports.confirmEmail = (req, res) => {
               hours: {
                 hourslogged: {
                   [confirmationNum]: {
-                    'confirmed': 'true'
+                    'confirmed': true
                   } 
                 }
               }
