@@ -56,11 +56,7 @@ class Home extends Component {
     setTimeout(ensureFireAuth, 500);
 
     //Debugging
-    console.log(
-      this.state.user,
-      this.state.fireuser,
-      this.state.fireuser.hours.hourslogged
-    );
+    console.log(this.state.user, this.state.fireuser);
   }
 
   render() {
@@ -110,7 +106,32 @@ class Home extends Component {
                     paddingRight: "25%",
                     marginBottom: "5px"
                   }}
-                ></div>
+                >
+                  <table className="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col"># Of Hours</th>
+                        <th scope="col">Site Name</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Confirmed?</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">10</th>
+                        <td>CSMB</td>
+                        <td>Our Address</td>
+                        <td>Yes</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">10</th>
+                        <td>CSMB</td>
+                        <td>Our Address</td>
+                        <td>Yes</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
             <div className="col-sm-5">
