@@ -6,7 +6,7 @@
   background-attachment: fixed;
 }
 #profile{
-  height: 570px;
+  height: 70%;
   width: 70%;
   background-image: -webkit-linear-gradient(160deg, #030d61 30%, #fff 30%);
   background-image: -o-linear-gradient(160deg, #030d61 30%, #fff 30%);
@@ -17,7 +17,12 @@
 #pimg{
   border-radius: 50%;
 }
-
+#bar{
+  padding-top: 30px;
+}
+.progress{
+  margin-top: 11%;
+}
 .inputStyle {
   background: whitesmoke;
   border: none;

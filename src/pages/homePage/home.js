@@ -155,11 +155,13 @@ class Home extends Component {
                   <h4>
                     {this.state.fireuser.info.firstName} has{" "}
                     <span
+                      id="bar"
                       style={{
-                        marginTop: "20px",
+                        marginTop: "30%",
+                        paddingTop:"0%",
                         color: "#030D61",
                         fontWeight: "bold",
-                        fontSize: "larger"
+                        fontSize: "150%"
                       }}
                     >
                       {this.state.fireuser.hours.totalHours +
