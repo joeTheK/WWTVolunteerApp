@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Navbar from "../components/Navbar";
 import LogHourForm from "./logHourForm";
 import LoggedHourTable from "./loggedHourTable";
-import Spinner from '../components/Spinner'
 //import MissionVision from "../components/MissionVision";
 import "./home.css";
 
@@ -64,7 +63,7 @@ class Home extends Component {
   
   render() {
     if (!this.state.user || !this.state.fireuser) {
-      return <Spinner size='8x' spinning='spinning' />
+      return <div>Loading...</div>;
     }
 
     //Debugging
