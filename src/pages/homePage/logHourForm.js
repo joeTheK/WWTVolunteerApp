@@ -63,8 +63,8 @@ const updateHours = function(
     .then(res => res.json())
     .then(data => {
       //this.setState({ sendingEmail: false})
-      notify.show(data.msg)
-      this.form.reset()
+      alert(data.msg)
+      window.location.reload(false);
     })
     .catch(err => console.log(err));
 };

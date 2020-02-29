@@ -20,7 +20,7 @@ function createData(SiteName, SiteLocation, SiteCorridinator, SiteVerified) {
 
 export default function DenseTable(currentHourData) {
   const classes = useStyles();
-  
+  console.log(currentHourData);
   const createDataSet = function() {
     const rows = [
         // createData('Collegiate', '1547 S Theresa Ave, St. Louis, MO 63104', 'ybekirov@csmb-stl.org')
@@ -39,7 +39,7 @@ export default function DenseTable(currentHourData) {
   const currentDataSet = createDataSet();
 
   return (
-    <div style={{ overflow: 'auto', height: '150px' }}>
+    <div style={{ overflow: 'auto', height: '200px' }}>
     <TableContainer component={Paper}>
       <Table className={classes.table} size="small" aria-label="a dense table">
         <TableHead>
