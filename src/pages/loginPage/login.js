@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./login.css";
 // import { GoogleLogin } from 'react-google-login';
 import "typeface-quicksand";
+import logo from "./logo.jpg";
 
 //FireBase
 import firebase from "firebase";
@@ -34,8 +35,12 @@ class Login extends Component {
     return (
       <div id="App">
         <div id="box">
-        <h1 id="counter">1 0 0 0</h1>
-        <h2 id="text">Hours Served </h2>
+          <div className = "card-body">
+<a  >      
+        <img src={logo} alt="OwlHours" id = "logo" />
+</a>
+          </div>
+        
         <br></br>
           <StyledFirebaseAuth
             uiConfig={this.uiConfig}
