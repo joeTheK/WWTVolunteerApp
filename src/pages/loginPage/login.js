@@ -35,7 +35,7 @@ class Login extends Component {
     return (
       <div id="App">
         <div id="box">
-          <div className = "card-body">
+          <div className = "logbod">
 <a  >      
         <img src={logo} alt="OwlHours" id = "logo" />
 </a>
