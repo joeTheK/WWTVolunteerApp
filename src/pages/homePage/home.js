@@ -104,18 +104,15 @@ class Home extends Component {
               <div className="card" style={{ height: "300px" }}>
                 <div
                   className="card-body"
-<<<<<<< HEAD
                 >
                   <LoggedHourTable
                     currentHourData={this.state.fireuser.hours}
-                  />
-=======
                   style={{
                     paddingLeft: "25%",
                     paddingRight: "25%",
                     marginBottom: "5px"
                   }}
-                >
+                />
                   <table className="table table-striped">
                     <thead>
                       <tr>
@@ -140,7 +137,6 @@ class Home extends Component {
                       </tr>
                     </tbody>
                   </table>
->>>>>>> f93d14ef2a1af74799f83d56caa7cdbd83532c5a
                 </div>
               </div>
             </div>
@@ -187,10 +183,11 @@ class Home extends Component {
                     {this.state.fireuser.info.firstName} has{" "}
                     <span
                       style={{
-                        marginTop: "20px",
+                        marginTop: "30%",
+                        paddingTop:"10%",
                         color: "#030D61",
                         fontWeight: "bold",
-                        fontSize: "larger"
+                        fontSize: "150%"
                       }}
                     >
                       {this.state.fireuser.hours.totalHours +

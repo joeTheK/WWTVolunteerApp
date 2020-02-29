@@ -17,7 +17,9 @@
 #pimg{
   border-radius: 50%;
 }
-
+.progress{
+  margin-top: 11%;
+}
 .inputStyle {
   background: whitesmoke;
   border: none;
