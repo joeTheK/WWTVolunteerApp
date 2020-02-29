@@ -10,12 +10,12 @@ import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles({
   table: {
-    minWidth: 250,
+    minWidth: 270,
   },
 });
 
-function createData(SiteName, SiteLocation, SiteCorridinator) {
-  return { SiteName, SiteLocation, SiteCorridinator };
+function createData(SiteName, SiteLocation, SiteCorridinator, SiteVerified) {
+  return { SiteName, SiteLocation, SiteCorridinator, SiteVerified };
 }
 
 export default function DenseTable(currentHourData) {
@@ -25,10 +25,13 @@ export default function DenseTable(currentHourData) {
     const rows = [
         // createData('Collegiate', '1547 S Theresa Ave, St. Louis, MO 63104', 'ybekirov@csmb-stl.org')
     ];
-    for (var i=1; i <= currentHourData.totalLogged; i++) {
-        console.log(i)
-        console.log(currentHourData.hourslogged[i].siteName, currentHourData.hourslogged[i].siteAddress, currentHourData.hourslogged[i].siteCoordinatorEmail)
-        rows[i] = (createData(currentHourData.hourslogged[i].siteName, currentHourData.hourslogged[i].siteAddress, currentHourData.hourslogged[i].siteCoordinatorEmail))
+    for (var i=1; i <= currentHourData.currentHourData.totalLogged; i++) {
+      if (currentHourData.currentHourData.hourslogged[i].confirmed) {
+        rows[i] = (createData(currentHourData.currentHourData.hourslogged[i].siteName, currentHourData.currentHourData.hourslogged[i].siteAddress, currentHourData.currentHourData.hourslogged[i].siteCoordinatorEmail, 'Confirmed'))
+      }
+      else {
+        rows[i] = (createData(currentHourData.currentHourData.hourslogged[i].siteName, currentHourData.currentHourData.hourslogged[i].siteAddress, currentHourData.currentHourData.hourslogged[i].siteCoordinatorEmail, 'Not Confirmed'))
+      }
     } 
     return rows;
   }
@@ -36,6 +39,7 @@ export default function DenseTable(currentHourData) {
   const currentDataSet = createDataSet();
 
   return (
+    <div style={{ overflow: 'auto', height: '150px' }}>
     <TableContainer component={Paper}>
       <Table className={classes.table} size="small" aria-label="a dense table">
         <TableHead>
@@ -43,20 +47,24 @@ export default function DenseTable(currentHourData) {
             <TableCell>Site Location</TableCell>
             <TableCell align="center">Location</TableCell>
             <TableCell align="center">Site Address</TableCell>
+            <TableCell align="center">Status</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
+        
           {currentDataSet.map(row => (
-            <TableRow key={row.name}>
+            <TableRow key={row.SiteName}>
               <TableCell component="th" scope="row">
                 {row.SiteName}
               </TableCell>
               <TableCell align="center">{row.SiteLocation}</TableCell>
               <TableCell align="center">{row.SiteCorridinator}</TableCell>
+              <TableCell align="center">{row.SiteVerified}</TableCell>
             </TableRow>
           ))}
         </TableBody>
       </Table>
     </TableContainer>
+    </div>
   );
 }

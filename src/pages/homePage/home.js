@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Navbar from "../components/Navbar";
 import LogHourForm from "./logHourForm";
 import LoggedHourTable from "./loggedHourTable";
+import Spinner from '../components/Spinner'
 //import MissionVision from "../components/MissionVision";
 import "./home.css";
 
@@ -63,7 +64,7 @@ class Home extends Component {
   
   render() {
     if (!this.state.user || !this.state.fireuser) {
-      return <div>Loading...</div>;
+      return <Spinner size='8x' spinning='spinning' />
     }
 
     //Debugging
@@ -104,43 +105,12 @@ class Home extends Component {
               <div className="card" style={{ height: "300px" }}>
                 <div
                   className="card-body"
-<<<<<<< HEAD
                 >
+                  <h4>Previously Logged Hours</h4>
+                  <br></br>
                   <LoggedHourTable
                     currentHourData={this.state.fireuser.hours}
                   />
-=======
-                  style={{
-                    paddingLeft: "25%",
-                    paddingRight: "25%",
-                    marginBottom: "5px"
-                  }}
-                >
-                  <table className="table table-striped">
-                    <thead>
-                      <tr>
-                        <th scope="col"># Of Hours</th>
-                        <th scope="col">Site Name</th>
-                        <th scope="col">Address</th>
-                        <th scope="col">Confirmed?</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">10</th>
-                        <td>CSMB</td>
-                        <td>Our Address</td>
-                        <td>Yes</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">10</th>
-                        <td>CSMB</td>
-                        <td>Our Address</td>
-                        <td>Yes</td>
-                      </tr>
-                    </tbody>
-                  </table>
->>>>>>> f93d14ef2a1af74799f83d56caa7cdbd83532c5a
                 </div>
               </div>
             </div>
